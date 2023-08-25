@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00-Doc", "00-Doc", "{17E3BDC2-4217-4004-BD96-D12BF1BAF38D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10-Core", "10-Core", "{AEDC74D6-593E-48BA-BEDA-B9046F25E156}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20-Common", "20-Common", "{E7808112-6FDA-43F5-B0DA-B26D98454699}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "80-Client", "80-Client", "{EAE46646-C892-475A-8CE0-C10E62068BAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "60-Tool", "60-Tool", "{7346D48D-E3B4-4E4F-93CB-0453B02024C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "90-Test", "90-Test", "{CDC92582-C791-4A94-89F3-ADB98780C082}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dance", "..\..\Dance\Dance\Dance\Dance.csproj", "{277C7613-6A95-43DB-9C58-61DFD54D72CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dance.Wpf", "..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj", "{5E311E04-CD3C-4E8F-81EC-64417DE9601B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "70-Module", "70-Module", "{2BC71BF8-53F5-4242-B3A9-F56B581197B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dance.Tool.Module", "Dance.Tool.Module\Dance.Tool.Module.csproj", "{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{277C7613-6A95-43DB-9C58-61DFD54D72CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277C7613-6A95-43DB-9C58-61DFD54D72CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277C7613-6A95-43DB-9C58-61DFD54D72CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277C7613-6A95-43DB-9C58-61DFD54D72CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E311E04-CD3C-4E8F-81EC-64417DE9601B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E311E04-CD3C-4E8F-81EC-64417DE9601B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E311E04-CD3C-4E8F-81EC-64417DE9601B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E311E04-CD3C-4E8F-81EC-64417DE9601B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{277C7613-6A95-43DB-9C58-61DFD54D72CF} = {AEDC74D6-593E-48BA-BEDA-B9046F25E156}
+		{5E311E04-CD3C-4E8F-81EC-64417DE9601B} = {AEDC74D6-593E-48BA-BEDA-B9046F25E156}
+		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80} = {2BC71BF8-53F5-4242-B3A9-F56B581197B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {82B580A9-AC35-4948-A21F-0402872915D8}
+	EndGlobalSection
+EndGlobal
