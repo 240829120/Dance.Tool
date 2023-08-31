@@ -10,6 +10,7 @@ namespace Dance.Tool.Module
     /// <summary>
     /// 欢迎视图模型
     /// </summary>
+    [DanceSingleton(typeof(WelcomeViewModel))]
     public class WelcomeViewModel : DanceViewModel
     {
         public WelcomeViewModel()
@@ -44,7 +45,7 @@ namespace Dance.Tool.Module
         /// <summary>
         /// 进入
         /// </summary>
-        private void Enter()
+        protected virtual void Enter()
         {
 
         }

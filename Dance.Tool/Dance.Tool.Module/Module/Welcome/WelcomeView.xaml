@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Dance.Tool.Module">
+
+    <Style TargetType="{x:Type local:WelcomeView}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:WelcomeView}">
+                    <TextBlock Text="WelcomeView" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Foreground="Red" FontWeight="Bold"></TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

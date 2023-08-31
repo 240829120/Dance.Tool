@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dance.Wpf", "..\..\Dance\Da
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "70-Module", "70-Module", "{2BC71BF8-53F5-4242-B3A9-F56B581197B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dance.Tool.Module", "Dance.Tool.Module\Dance.Tool.Module.csproj", "{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dance.Tool.Module", "Dance.Tool.Module\Dance.Tool.Module.csproj", "{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dance.Tool", "Dance.Tool\Dance.Tool.csproj", "{11880AB3-1403-41E6-B629-57275FADF6F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11880AB3-1403-41E6-B629-57275FADF6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11880AB3-1403-41E6-B629-57275FADF6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11880AB3-1403-41E6-B629-57275FADF6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11880AB3-1403-41E6-B629-57275FADF6F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{277C7613-6A95-43DB-9C58-61DFD54D72CF} = {AEDC74D6-593E-48BA-BEDA-B9046F25E156}
 		{5E311E04-CD3C-4E8F-81EC-64417DE9601B} = {AEDC74D6-593E-48BA-BEDA-B9046F25E156}
 		{FAC4B967-2EB1-41AC-B70C-E694EC35FB80} = {2BC71BF8-53F5-4242-B3A9-F56B581197B7}
+		{11880AB3-1403-41E6-B629-57275FADF6F8} = {EAE46646-C892-475A-8CE0-C10E62068BAE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82B580A9-AC35-4948-A21F-0402872915D8}
