@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dance.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace Dance.Tool
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            DanceDomain.Current?.Dispose();
+            Application.Current.Shutdown();
         }
     }
 }

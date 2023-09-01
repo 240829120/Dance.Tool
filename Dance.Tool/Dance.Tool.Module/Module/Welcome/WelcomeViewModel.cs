@@ -24,7 +24,7 @@ namespace Dance.Tool.Module
         /// </summary>
         private void InitCommand()
         {
-            this.EnterCommand = new RelayCommand(this.Enter);
+
         }
 
         // ====================================================================================
@@ -35,21 +35,6 @@ namespace Dance.Tool.Module
         // ====================================================================================
         // Command
 
-        #region EnterCommand -- 进入命令
 
-        /// <summary>
-        /// 进入命令
-        /// </summary>
-        public RelayCommand? EnterCommand { get; set; }
-
-        /// <summary>
-        /// 进入
-        /// </summary>
-        protected virtual void Enter()
-        {
-
-        }
-
-        #endregion
     }
 }

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf.Theme\Dance.Wpf.Theme.csproj" />
     <ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
     <ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
     <ProjectReference Include="..\Dance.Tool.Module\Dance.Tool.Module.csproj" />
