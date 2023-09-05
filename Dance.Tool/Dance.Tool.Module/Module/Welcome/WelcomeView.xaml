@@ -3,6 +3,10 @@
                     xmlns:dance="http://schemas.dance.com/wpf"
                     xmlns:local="clr-namespace:Dance.Tool.Module">
 
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Dance.Wpf.Theme;component/Styles/TextBox.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+
     <Style TargetType="{x:Type local:WelcomeView}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
         <Setter Property="Template">
@@ -17,7 +21,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_W.png" Width="106" Height="114"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_W" LinearVelocity="-100,0" Position="50,300" AngularVelocity="-0.4">
+                                    <dance:DanceBody x:Name="body_W" LinearVelocity="-100,0" Position="50,260" AngularVelocity="-0.4">
                                         <dance:DanceRectangleFixture Width="106" Height="114" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -26,7 +30,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_e.png" Width="68" Height="69"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,360" AngularVelocity="0.3">
+                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,320" AngularVelocity="0.3">
                                         <dance:DanceRectangleFixture Width="68" Height="69" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -35,7 +39,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_l.png" Width="30" Height="110"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,360" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,320" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="30" Height="110" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -44,7 +48,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_c.png" Width="50" Height="74"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,380" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,340" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="50" Height="74" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -53,7 +57,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_o.png" Width="54" Height="72"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_o" LinearVelocity="-70,0" Position="650,380" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_o" LinearVelocity="-70,0" Position="650,340" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="54" Height="72" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -62,7 +66,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_m.png" Width="86" Height="80"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_m" LinearVelocity="-70,0" Position="800,380" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_m" LinearVelocity="-70,0" Position="800,340" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="86" Height="80" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -71,7 +75,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_e2.png" Width="68" Height="70"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_e2" LinearVelocity="-70,0" Position="950,380" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_e2" LinearVelocity="-70,0" Position="950,340" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="68" Height="70" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -109,7 +113,12 @@
                             </dance:DancePhysicsItem>
 
                             <dance:DancePhysicsItem>
-                                <Image Source="/Dance.Tool.Module;component/Resources/Images/email.png" Width="200" Height="66"></Image>
+                                <Grid Width="200" Height="66">
+                                    <Image Source="/Dance.Tool.Module;component/Resources/Images/email.png"></Image>
+                                    <TextBox CaretBrush="White" Text="240829120@qq.com"
+                                             FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                             Style="{StaticResource TextBox_None}"></TextBox>
+                                </Grid>
                                 <dance:DancePhysicsItem.Body>
                                     <dance:DanceBody x:Name="body_email" LinearVelocity="-70,0" Position="950,600" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="200" Height="66" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
@@ -139,7 +148,7 @@
                             <dance:DanceParticleControllerBox TranslateSpeedX="0,100" TranslateSpeedY="100,200" TranslateSpeedZ="0,300"
                                                               RotationSpeedX="10,45" RotationSpeedY="10,45" RotationSpeedZ="20,90"
                                                               X="0,1200" Y="0,0" Z="0,0" Perspective="-0.001"
-                                                              Duration="00:00:04,00:00:05" GenerateSpeed="50">
+                                                              Duration="00:00:04,00:00:05" GenerateSpeed="20">
                                 <dance:DanceParticleImageleGenerator Width="10,20" Height="10,20">
                                     <dance:DanceParticleImageDefine Uri="/Dance.Tool.Module;component/Resources/Images/Flower/flower1.png"></dance:DanceParticleImageDefine>
                                     <dance:DanceParticleImageDefine Uri="/Dance.Tool.Module;component/Resources/Images/Flower/flower2.png"></dance:DanceParticleImageDefine>
