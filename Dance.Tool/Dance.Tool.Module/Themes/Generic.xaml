@@ -4,6 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Dance.Tool.Module;component/Module/Main/MainView.xaml"></ResourceDictionary>
         <ResourceDictionary Source="/Dance.Tool.Module;component/Module/Welcome/WelcomeView.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Dance.Tool.Module;component/Module/Home/HomeView.xaml"></ResourceDictionary>
 
     </ResourceDictionary.MergedDictionaries>
 

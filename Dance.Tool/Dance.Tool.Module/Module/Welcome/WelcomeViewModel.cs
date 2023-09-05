@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using Dance.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +49,8 @@ namespace Dance.Tool.Module
         /// </summary>
         private void Enter()
         {
-            MessageBox.Show("123");
+            MainViewModel vm = DanceDomain.Current.LifeScope.Resolve<MainViewModel>();
+            vm.CurrentNavigationModel = vm.NavigationModels?.FirstOrDefault(p => p.ViewType == typeof(HomeView));
         }
 
         #endregion

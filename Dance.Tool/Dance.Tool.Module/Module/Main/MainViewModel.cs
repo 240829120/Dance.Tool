@@ -17,7 +17,8 @@ namespace Dance.Tool.Module
         {
             this.NavigationModels = new()
             {
-                new NavigationModel(){ ViewType = typeof(WelcomeView) }
+                new NavigationModel { ViewType = typeof(WelcomeView) },
+                new NavigationModel { ViewType = typeof(HomeView) }
             };
 
             this.CurrentNavigationModel = this.NavigationModels.FirstOrDefault();
