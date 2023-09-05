@@ -9,6 +9,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\bg.jpg" />
 	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\enter.png" />
 	  <None Remove="Resources\Images\flower1.png" />
 	  <None Remove="Resources\Images\flower2.png" />
 	  <None Remove="Resources\Images\flower3.png" />
@@ -35,6 +36,7 @@
 	<ItemGroup>
 	  <Resource Include="Resources\Images\bg.jpg" />
 	  <Resource Include="Resources\Images\email.png" />
+	  <Resource Include="Resources\Images\enter.png" />
 	  <Resource Include="Resources\Images\Flower\flower1.png" />
 	  <Resource Include="Resources\Images\Flower\flower2.png" />
 	  <Resource Include="Resources\Images\Flower\flower3.png" />

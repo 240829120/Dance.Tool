@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Dance.Tool.Module
 {
@@ -24,7 +25,7 @@ namespace Dance.Tool.Module
         /// </summary>
         private void InitCommand()
         {
-
+            this.EnterCommand = new RelayCommand(this.Enter);
         }
 
         // ====================================================================================
@@ -35,6 +36,21 @@ namespace Dance.Tool.Module
         // ====================================================================================
         // Command
 
+        #region EnterCommand -- 确认命令
 
+        /// <summary>
+        /// 确认命令
+        /// </summary>
+        public RelayCommand? EnterCommand { get; set; }
+
+        /// <summary>
+        /// 确认
+        /// </summary>
+        private void Enter()
+        {
+            MessageBox.Show("123");
+        }
+
+        #endregion
     }
 }

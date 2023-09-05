@@ -5,6 +5,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Dance.Wpf.Theme;component/Styles/TextBox.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Dance.Wpf.Theme;component/Styles/Button.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type local:WelcomeView}">
@@ -12,7 +13,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:WelcomeView}">
-                    <Grid>
+                    <Grid Background="Transparent">
                         <Image Source="/Dance.Tool.Module;component/Resources/Images/bg.jpg" Stretch="UniformToFill"></Image>
 
                         <dance:DancePhysicsItemsControl x:Name="layout" Grid.RowSpan="2" StepSpeed="2" Gravity="0,100" Width="1200" HorizontalAlignment="Center">
@@ -30,7 +31,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_e.png" Width="68" Height="69"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,320" AngularVelocity="0.3">
+                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,300" AngularVelocity="0.3">
                                         <dance:DanceRectangleFixture Width="68" Height="69" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -39,7 +40,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_l.png" Width="30" Height="110"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,320" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,300" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="30" Height="110" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -48,7 +49,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_c.png" Width="50" Height="74"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,340" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,350" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="50" Height="74" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -57,7 +58,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_o.png" Width="54" Height="72"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_o" LinearVelocity="-70,0" Position="650,340" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_o" LinearVelocity="-70,0" Position="650,350" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="54" Height="72" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -66,7 +67,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_m.png" Width="86" Height="80"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_m" LinearVelocity="-70,0" Position="800,340" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_m" LinearVelocity="-70,0" Position="800,350" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="86" Height="80" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -75,7 +76,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_e2.png" Width="68" Height="70"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_e2" LinearVelocity="-70,0" Position="950,340" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_e2" LinearVelocity="-70,0" Position="950,350" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="68" Height="70" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -115,9 +116,13 @@
                             <dance:DancePhysicsItem>
                                 <Grid Width="200" Height="66">
                                     <Image Source="/Dance.Tool.Module;component/Resources/Images/email.png"></Image>
-                                    <TextBox CaretBrush="White" Text="240829120@qq.com"
+                                    <TextBox CaretBrush="White" Text="240829120@qq.com" FontSize="14" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,5"
                                              FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                             Style="{StaticResource TextBox_None}"></TextBox>
+                                             Style="{StaticResource TextBox_None}">
+                                        <TextBox.RenderTransform>
+                                            <RotateTransform Angle="-3"></RotateTransform>
+                                        </TextBox.RenderTransform>
+                                    </TextBox>
                                 </Grid>
                                 <dance:DancePhysicsItem.Body>
                                     <dance:DanceBody x:Name="body_email" LinearVelocity="-70,0" Position="950,600" AngularVelocity="0.2">
@@ -140,6 +145,38 @@
                                                               StrokeDashPattern="2,2"
                                                               StrokeColor="#88376a9b" StrokeSize="2"></dance:DanceDistanceJoint>
                                 </dance:DancePhysicsItem.Joints>
+                            </dance:DancePhysicsItem>
+
+                            <dance:DancePhysicsItem>
+                                <Button x:Name="btEnter" Width="200" Height="63" Style="{StaticResource Button_None}" Opacity="0.4"
+                                        Command="{Binding Path=EnterCommand,Mode=OneWay}">
+                                    <Button.Resources>
+                                        <Storyboard x:Key="MouseEnterStoryboard">
+                                            <DoubleAnimation To="1" Duration="00:00:00.3" Storyboard.TargetName="btEnter" Storyboard.TargetProperty="(UIElement.Opacity)"></DoubleAnimation>
+                                        </Storyboard>
+                                        <Storyboard x:Key="MouseLeaveStoryboard">
+                                            <DoubleAnimation To="0.4" Duration="00:00:00.3" Storyboard.TargetName="btEnter" Storyboard.TargetProperty="(UIElement.Opacity)"></DoubleAnimation>
+                                        </Storyboard>
+                                    </Button.Resources>
+                                    <Grid UseLayoutRounding="True" SnapsToDevicePixels="True">
+                                        <Image Source="/Dance.Tool.Module;component/Resources/Images/enter.png"></Image>
+                                        <TextBlock Text="进入" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" 
+                                                   Foreground="White" FontWeight="Bold"></TextBlock>
+                                    </Grid>
+                                    <Button.Triggers>
+                                        <EventTrigger RoutedEvent="MouseEnter">
+                                            <BeginStoryboard Storyboard="{StaticResource MouseEnterStoryboard}"></BeginStoryboard>
+                                        </EventTrigger>
+                                        <EventTrigger RoutedEvent="MouseLeave">
+                                            <BeginStoryboard Storyboard="{StaticResource MouseLeaveStoryboard}"></BeginStoryboard>
+                                        </EventTrigger>
+                                    </Button.Triggers>
+                                </Button>
+                                <dance:DancePhysicsItem.Body>
+                                    <dance:DanceBody x:Name="bStatic3" Position="600,500" BodyType="Static">
+                                        <dance:DanceRectangleFixture Width="200" Height="10"></dance:DanceRectangleFixture>
+                                    </dance:DanceBody>
+                                </dance:DancePhysicsItem.Body>
                             </dance:DancePhysicsItem>
 
                         </dance:DancePhysicsItemsControl>

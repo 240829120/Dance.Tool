@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dance.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Dance.Tool.Module
         static WelcomeView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(WelcomeView), new FrameworkPropertyMetadata(typeof(WelcomeView)));
+        }
+
+        public WelcomeView()
+        {
+            WelcomeViewModel vm = DanceDomain.Current.LifeScope.Resolve<WelcomeViewModel>();
+            vm.View = this;
+            this.DataContext = vm;
         }
     }
 }
