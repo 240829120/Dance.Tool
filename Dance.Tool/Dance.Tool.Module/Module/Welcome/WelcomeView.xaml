@@ -22,7 +22,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_W.png" Width="106" Height="114"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_W" LinearVelocity="-100,0" Position="50,260" AngularVelocity="-0.4">
+                                    <dance:DanceBody x:Name="body_W" LinearVelocity="-100,0" Position="50,210" AngularVelocity="-0.4">
                                         <dance:DanceRectangleFixture Width="106" Height="114" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -31,7 +31,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_e.png" Width="68" Height="69"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,300" AngularVelocity="0.3">
+                                    <dance:DanceBody x:Name="body_e" LinearVelocity="-70,0" Position="200,280" AngularVelocity="0.3">
                                         <dance:DanceRectangleFixture Width="68" Height="69" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -40,7 +40,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_l.png" Width="30" Height="110"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,300" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_l" LinearVelocity="-70,0" Position="350,290" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="30" Height="110" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -49,7 +49,7 @@
                             <dance:DancePhysicsItem>
                                 <Image Source="/Dance.Tool.Module;component/Resources/Images/FontImage/font_c.png" Width="50" Height="74"></Image>
                                 <dance:DancePhysicsItem.Body>
-                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,350" AngularVelocity="0.2">
+                                    <dance:DanceBody x:Name="body_c" LinearVelocity="-70,0" Position="500,340" AngularVelocity="0.2">
                                         <dance:DanceRectangleFixture Width="50" Height="74" Friction="0.1" Restitution="0.95"></dance:DanceRectangleFixture>
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
@@ -138,7 +138,7 @@
                                     </dance:DanceBody>
                                 </dance:DancePhysicsItem.Body>
                                 <dance:DancePhysicsItem.Joints>
-                                    <dance:DanceDistanceJoint BodyA="{x:Reference bStatic2}" BodyB="{x:Reference body_email}" AnchorA="-40,0" AnchorB="-40,-33"
+                                    <dance:DanceDistanceJoint BodyA="{x:Reference bStatic2}" BodyB="{x:Reference body_email}" AnchorA="-40,0" AnchorB="-40,-25"
                                                               StrokeDashPattern="2,2"
                                                               StrokeColor="#88376a9b" StrokeSize="2"></dance:DanceDistanceJoint>
                                     <dance:DanceDistanceJoint BodyA="{x:Reference bStatic2}" BodyB="{x:Reference body_email}" AnchorA="40,0" AnchorB="40,-33"
