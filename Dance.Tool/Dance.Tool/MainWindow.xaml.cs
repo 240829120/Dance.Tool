@@ -24,9 +24,17 @@ namespace Dance.Tool
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Closed += Window_Closed;
+            this.Loaded += MainWindow_Loaded;
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Top = 600;
+        }
+
+        private void Window_Closed(object? sender, EventArgs e)
         {
             DanceDomain.Current?.Dispose();
             Application.Current.Shutdown();
