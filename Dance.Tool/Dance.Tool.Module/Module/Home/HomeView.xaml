@@ -12,7 +12,9 @@
                         <Grid>
                             <TextBlock Text="HomeView" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Foreground="Red" FontWeight="Bold" />
 
-                            <TextBox Height="NaN"></TextBox>
+                            <TextBox Width="240" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
+
+                            <dance:DanceSeparator>123</dance:DanceSeparator>
                         </Grid>
                     </GroupBox>
                 </ControlTemplate>
