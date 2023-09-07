@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:behaviors="http://schemas.microsoft.com/xaml/behaviors"
                     xmlns:dance="http://schemas.dance.com/wpf"
                     xmlns:local="clr-namespace:Dance.Tool.Module">
 
@@ -148,8 +149,7 @@
                             </dance:DancePhysicsItem>
 
                             <dance:DancePhysicsItem>
-                                <Button x:Name="btEnter" Width="200" Height="63" Style="{StaticResource Button_None}" Opacity="0.4"
-                                        Command="{Binding Path=EnterCommand,Mode=OneWay}">
+                                <Button x:Name="btEnter" Width="200" Height="63" Style="{StaticResource Button_None}" Opacity="0.4" Command="{Binding EnterCommand}">
                                     <Button.Resources>
                                         <Storyboard x:Key="MouseEnterStoryboard">
                                             <DoubleAnimation To="1" Duration="00:00:00.3" Storyboard.TargetName="btEnter" Storyboard.TargetProperty="(UIElement.Opacity)"></DoubleAnimation>
