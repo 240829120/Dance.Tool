@@ -8,7 +8,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:MainTopView">
-                    <Grid Background="Black">
+                    <Grid Background="#FFFAFAFA">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="120"></ColumnDefinition>

@@ -8,7 +8,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:HomeView">
-                    <TextBlock Text="HomeView" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Foreground="Red" FontWeight="Bold" />
+                    <GroupBox Header="测试" Margin="100">
+                        <Grid>
+                            <TextBlock Text="HomeView" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Foreground="Red" FontWeight="Bold" />
+
+                            <TextBox Height="NaN"></TextBox>
+                        </Grid>
+                    </GroupBox>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
