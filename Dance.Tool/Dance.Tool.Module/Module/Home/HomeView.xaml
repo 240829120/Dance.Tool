@@ -10,7 +10,7 @@
                 <ControlTemplate TargetType="local:HomeView">
                     <GroupBox Header="测试" Margin="100">
                         <Grid>
-                            <dance:DanceTreeView Width="300" HorizontalAlignment="Left">
+                            <dance:DanceTreeView Width="300" HorizontalAlignment="Left" Margin="0,50,0,0">
                                 <dance:DanceTreeViewItem Header="t1">
                                     <dance:DanceTreeViewItem Header="t1_1">
                                         <dance:DanceTreeViewItem Header="t1_1_1"></dance:DanceTreeViewItem>
@@ -41,7 +41,7 @@
                                 <dance:DanceTreeViewItem Header="t18"></dance:DanceTreeViewItem>
                             </dance:DanceTreeView>
 
-                            <ListBox Width="300" HorizontalAlignment="Right">
+                            <ListBox Width="300" HorizontalAlignment="Right" Margin="0,50,0,0">
                                 <ListBoxItem>1</ListBoxItem>
                                 <ListBoxItem>2</ListBoxItem>
                                 <ListBoxItem>3</ListBoxItem>
@@ -76,6 +76,10 @@
 
                             <dance:DanceSeparator>123</dance:DanceSeparator>
 
+
+                            <dance:DanceShuttle Height="30" VerticalAlignment="Top" Index="10">
+                                <Rectangle Fill="Red"></Rectangle>
+                            </dance:DanceShuttle>
                         </Grid>
                     </GroupBox>
                 </ControlTemplate>
