@@ -10,9 +10,39 @@
                 <ControlTemplate TargetType="local:HomeView">
                     <GroupBox Header="测试" Margin="100">
                         <Grid>
-                            <TextBlock Text="HomeView" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Foreground="Red" FontWeight="Bold" />
-                            
-                            <TextBox Width="240" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"></TextBox>
+
+                            <Grid Width="400" HorizontalAlignment="Left">
+                                <dance:DanceTreeView>
+                                    <dance:DanceTreeViewItem Header="t1">
+                                        <dance:DanceTreeViewItem Header="t1_1">
+                                            <dance:DanceTreeViewItem Header="t1_1_1"></dance:DanceTreeViewItem>
+                                            <dance:DanceTreeViewItem Header="t1_1_2"></dance:DanceTreeViewItem>
+                                            <dance:DanceTreeViewItem Header="t1_1_3"></dance:DanceTreeViewItem>
+                                            <dance:DanceTreeViewItem Header="t1_1_4"></dance:DanceTreeViewItem>
+                                        </dance:DanceTreeViewItem>
+                                        <dance:DanceTreeViewItem Header="t1_2"></dance:DanceTreeViewItem>
+                                        <dance:DanceTreeViewItem Header="t1_3"></dance:DanceTreeViewItem>
+                                        <dance:DanceTreeViewItem Header="t1_4"></dance:DanceTreeViewItem>
+                                    </dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t2"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t3"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t4"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t5"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t6"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t7"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t8"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t9"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t10"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t11"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t12"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t13"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t14"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t15"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t16"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t17"></dance:DanceTreeViewItem>
+                                    <dance:DanceTreeViewItem Header="t18"></dance:DanceTreeViewItem>
+                                </dance:DanceTreeView>
+                            </Grid>
 
                             <dance:DanceSeparator>123</dance:DanceSeparator>
                         </Grid>
