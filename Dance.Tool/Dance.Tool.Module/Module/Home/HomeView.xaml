@@ -26,7 +26,7 @@
                         <Border Grid.Column="1" Margin="10" 
                                 BorderThickness="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_THICKNESS}}"
                                 BorderBrush="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}">
-                            <dance:DanceNavigationView ItemsSource="{Binding Path=PluginModels}"
+                            <dance:DanceNavigationView ItemsSource="{Binding Path=PluginModels}" SwitchMode="TranslationY_Opacity"
                                                        SelectedItem="{Binding Path=SelectedPluginModel,Mode=TwoWay}">
                                 <dance:DanceNavigationView.ItemTemplate>
                                     <DataTemplate>

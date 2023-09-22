@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Dance.Tool.Plugin"
              xmlns:dance="http://schemas.dance.com/wpf"
              mc:Ignorable="d" d:Background="White"
-             d:DesignHeight="2800" d:DesignWidth="1200">
+             d:DesignHeight="3800" d:DesignWidth="1200">
 
     <ScrollViewer>
         <StackPanel Margin="20">
