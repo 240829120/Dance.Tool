@@ -11,7 +11,7 @@ namespace Dance.Tool.Module
     /// <summary>
     /// 首页视图模型
     /// </summary>
-    [DanceSingleton(typeof(HomeViewModel))]
+    [DanceSingleton]
     public class HomeViewModel : DanceViewModel
     {
         public HomeViewModel()

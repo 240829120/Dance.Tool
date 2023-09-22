@@ -9,7 +9,7 @@ namespace Dance.Tool.Plugin
     /// <summary>
     /// 物理引擎
     /// </summary>
-    [DanceSingleton(typeof(PhysicsViewModel))]
+    [DanceSingleton]
     public class PhysicsViewModel : DanceViewModel
     {
 

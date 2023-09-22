@@ -10,7 +10,7 @@ namespace Dance.Tool.Module
     /// <summary>
     /// 主视图模型
     /// </summary>
-    [DanceSingleton(typeof(MainViewModel))]
+    [DanceSingleton]
     public class MainViewModel : DanceViewModel
     {
         public MainViewModel()

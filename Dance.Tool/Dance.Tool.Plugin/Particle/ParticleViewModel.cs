@@ -9,7 +9,7 @@ namespace Dance.Tool.Plugin
     /// <summary>
     /// 粒子引擎视图
     /// </summary>
-    [DanceSingleton(typeof(ParticleViewModel))]
+    [DanceSingleton]
     public class ParticleViewModel : DanceViewModel
     {
 

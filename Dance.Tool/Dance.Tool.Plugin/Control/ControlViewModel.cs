@@ -10,7 +10,7 @@ namespace Dance.Tool.Plugin
     /// <summary>
     /// 控件视图模型
     /// </summary>
-    [DanceSingleton(typeof(ControlViewModel))]
+    [DanceSingleton]
     public class ControlViewModel : DanceViewModel
     {
         public ControlViewModel()

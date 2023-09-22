@@ -12,7 +12,7 @@ namespace Dance.Tool.Module
     /// <summary>
     /// 欢迎视图模型
     /// </summary>
-    [DanceSingleton(typeof(WelcomeViewModel))]
+    [DanceSingleton]
     public class WelcomeViewModel : DanceViewModel
     {
         public WelcomeViewModel()
