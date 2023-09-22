@@ -5,8 +5,8 @@
                     xmlns:local="clr-namespace:Dance.Tool.Module">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Dance.Wpf.Theme;component/Styles/TextBox.xaml"></ResourceDictionary>
-        <ResourceDictionary Source="/Dance.Wpf.Theme;component/Styles/Button.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Dance.Wpf;component/Themes/Styles/TextBox.xaml"></ResourceDictionary>
+        <ResourceDictionary Source="/Dance.Wpf;component/Themes/Styles/Button.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type local:WelcomeView}">

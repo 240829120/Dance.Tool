@@ -20,10 +20,14 @@ namespace Dance.Tool
 
             DanceDomain.Current = new();
             DanceDomain.Current.IocBuilder.AddAssemblys("Dance.Tool.Module");
+            DanceDomain.Current.IocBuilder.AddAssemblys("Dance.Tool.Plugin");
             DanceDomain.Current.Build();
 
-            IDanceMonitorManager manager = DanceDomain.Current.LifeScope.Resolve<IDanceMonitorManager>();
-            manager.MonitorInfo = new DanceMonitorInfo();
+            IDanceMonitorManager monitorManager = DanceDomain.Current.LifeScope.Resolve<IDanceMonitorManager>();
+            monitorManager.MonitorInfo = new DanceMonitorInfo();
+
+            IDancePluginManager pluginManager = DanceDomain.Current.LifeScope.Resolve<IDancePluginManager>();
+            pluginManager.LoadPlugin("Dance.Tool.Plugin");
         }
     }
 }

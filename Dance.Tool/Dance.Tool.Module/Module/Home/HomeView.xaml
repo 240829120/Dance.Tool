@@ -3,85 +3,39 @@
                     xmlns:dance="http://schemas.dance.com/wpf"
                     xmlns:local="clr-namespace:Dance.Tool.Module">
 
+    <dance:DanceTypeInstanceConverter x:Key="DanceTypeInstanceConverter"></dance:DanceTypeInstanceConverter>
+
     <Style TargetType="local:HomeView">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:HomeView">
-                    <GroupBox Header="测试" Margin="100">
-                        <Grid>
-                            <dance:DanceTreeView Width="300" HorizontalAlignment="Left" Margin="0,50,0,0">
-                                <dance:DanceTreeViewItem Header="t1">
-                                    <dance:DanceTreeViewItem Header="t1_1">
-                                        <dance:DanceTreeViewItem Header="t1_1_1"></dance:DanceTreeViewItem>
-                                        <dance:DanceTreeViewItem Header="t1_1_2"></dance:DanceTreeViewItem>
-                                        <dance:DanceTreeViewItem Header="t1_1_3"></dance:DanceTreeViewItem>
-                                        <dance:DanceTreeViewItem Header="t1_1_4"></dance:DanceTreeViewItem>
-                                    </dance:DanceTreeViewItem>
-                                    <dance:DanceTreeViewItem Header="t1_2"></dance:DanceTreeViewItem>
-                                    <dance:DanceTreeViewItem Header="t1_3"></dance:DanceTreeViewItem>
-                                    <dance:DanceTreeViewItem Header="t1_4"></dance:DanceTreeViewItem>
-                                </dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t2"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t3"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t4"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t5"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t6"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t7"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t8"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t9"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t10"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t11"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t12"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t13"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t14"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t15"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t16"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t17"></dance:DanceTreeViewItem>
-                                <dance:DanceTreeViewItem Header="t18"></dance:DanceTreeViewItem>
-                            </dance:DanceTreeView>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="300"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
-                            <ListBox Width="300" HorizontalAlignment="Right" Margin="0,50,0,0">
-                                <ListBoxItem>1</ListBoxItem>
-                                <ListBoxItem>2</ListBoxItem>
-                                <ListBoxItem>3</ListBoxItem>
-                                <ListBoxItem>4</ListBoxItem>
-                                <ListBoxItem>5</ListBoxItem>
-                                <ListBoxItem>6</ListBoxItem>
-                                <ListBoxItem>7</ListBoxItem>
-                                <ListBoxItem>8</ListBoxItem>
-                                <ListBoxItem>9</ListBoxItem>
-                                <ListBoxItem>10</ListBoxItem>
-                                <ListBoxItem>1</ListBoxItem>
-                                <ListBoxItem>2</ListBoxItem>
-                                <ListBoxItem>3</ListBoxItem>
-                                <ListBoxItem>4</ListBoxItem>
-                                <ListBoxItem>5</ListBoxItem>
-                                <ListBoxItem>6</ListBoxItem>
-                                <ListBoxItem>7</ListBoxItem>
-                                <ListBoxItem>8</ListBoxItem>
-                                <ListBoxItem>9</ListBoxItem>
-                                <ListBoxItem>10</ListBoxItem>
-                                <ListBoxItem>1</ListBoxItem>
-                                <ListBoxItem>2</ListBoxItem>
-                                <ListBoxItem>3</ListBoxItem>
-                                <ListBoxItem>4</ListBoxItem>
-                                <ListBoxItem>5</ListBoxItem>
-                                <ListBoxItem>6</ListBoxItem>
-                                <ListBoxItem>7</ListBoxItem>
-                                <ListBoxItem>8</ListBoxItem>
-                                <ListBoxItem>9</ListBoxItem>
-                                <ListBoxItem>10</ListBoxItem>
-                            </ListBox>
-
-                            <dance:DanceSeparator>123</dance:DanceSeparator>
-
-
-                            <dance:DanceShuttle Height="30" VerticalAlignment="Top" Index="10">
-                                <Rectangle Fill="Red"></Rectangle>
-                            </dance:DanceShuttle>
-                        </Grid>
-                    </GroupBox>
+                        <ListBox ItemsSource="{Binding Path=PluginModels}" SelectedValue="{Binding Path=SelectedPluginModel,Mode=TwoWay}" Margin="10">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Name}"></TextBlock>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        <Border Grid.Column="1" Margin="10" 
+                                BorderThickness="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_THICKNESS}}"
+                                BorderBrush="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}">
+                            <dance:DanceNavigationView ItemsSource="{Binding Path=PluginModels}"
+                                                       SelectedItem="{Binding Path=SelectedPluginModel,Mode=TwoWay}">
+                                <dance:DanceNavigationView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentControl Content="{Binding Path=ViewType,Converter={StaticResource DanceTypeInstanceConverter}}"></ContentControl>
+                                    </DataTemplate>
+                                </dance:DanceNavigationView.ItemTemplate>
+                            </dance:DanceNavigationView>
+                        </Border>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
