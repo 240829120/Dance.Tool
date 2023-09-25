@@ -52,5 +52,47 @@ namespace Dance.Tool.Plugin
         }
 
         #endregion
+
+        #region Sex -- 性别
+
+        private string? sex;
+        /// <summary>
+        /// 性别
+        /// </summary>
+        public string? Sex
+        {
+            get { return sex; }
+            set { sex = value; this.OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        #region City -- 城市
+
+        private string? city;
+        /// <summary>
+        /// 城市
+        /// </summary>
+        public string? City
+        {
+            get { return city; }
+            set { city = value; this.OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        #region School -- 学校
+
+        private string? school;
+        /// <summary>
+        /// 学校
+        /// </summary>
+        public string? School
+        {
+            get { return school; }
+            set { school = value; this.OnPropertyChanged(); }
+        }
+
+        #endregion
     }
 }

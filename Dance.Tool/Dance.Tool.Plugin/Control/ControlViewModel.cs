@@ -19,7 +19,15 @@ namespace Dance.Tool.Plugin
 
             for (int i = 0; i < 30; i++)
             {
-                this.itemsSource.Add(new() { Index = i, Name = $"name_{i}", Age = i + 17 });
+                this.itemsSource.Add(new()
+                {
+                    Index = i,
+                    Name = $"name_{i}",
+                    Age = i + 17,
+                    Sex = $"sex_{i}",
+                    City = $"city_{i}",
+                    School = $"school_{i}"
+                });
             }
         }
 

@@ -198,61 +198,53 @@
 
                     <dance:DanceSeparator Opacity="0.86">表格</dance:DanceSeparator>
 
-                    <StackPanel Orientation="Horizontal" Margin="0,30,0,30">
-                        <dance:DanceDataGrid Width="400" Height="300" Margin="10"
-                                             ItemsSource="{Binding Path=ItemsSource}">
-                            <dance:DanceDataGrid.Columns>
-                                <dance:DanceDataGridColumn Header="Index">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Index}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                                <dance:DanceDataGridColumn Header="Name">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                                <dance:DanceDataGridColumn Header="Age">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Age}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                            </dance:DanceDataGrid.Columns>
-                        </dance:DanceDataGrid>
-
-                        <dance:DanceDataGrid Width="400" Height="300" Margin="10"
-                                             ItemsSource="{Binding Path=ItemsSource}">
-                            <dance:DanceDataGrid.Columns>
-                                <dance:DanceDataGridColumn Header="Index" Width="200">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Index}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                                <dance:DanceDataGridColumn Header="Name" Width="200">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                                <dance:DanceDataGridColumn Header="Age" Width="200">
-                                    <dance:DanceDataGridColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBlock Text="{Binding Path=Age}" VerticalAlignment="Center"></TextBlock>
-                                        </DataTemplate>
-                                    </dance:DanceDataGridColumn.CellTemplate>
-                                </dance:DanceDataGridColumn>
-                            </dance:DanceDataGrid.Columns>
-                        </dance:DanceDataGrid>
-                    </StackPanel>
+                    <dance:DanceDataGrid Width="800" Height="300" Margin="0,30,0,30" HorizontalAlignment="Left"
+                                         ItemsSource="{Binding Path=ItemsSource}">
+                        <dance:DanceDataGrid.Columns>
+                            <dance:DanceDataGridColumn Header="Index">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Index}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Name">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Age">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Age}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Sex">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Sex}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="City">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=City}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="School">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=School}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                        </dance:DanceDataGrid.Columns>
+                    </dance:DanceDataGrid>
 
                     <dance:DanceSeparator Opacity="0.86">分页</dance:DanceSeparator>
 
