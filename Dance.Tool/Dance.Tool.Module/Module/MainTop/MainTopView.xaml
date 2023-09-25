@@ -16,6 +16,11 @@
 
                         <dance:DanceWindowDragPart></dance:DanceWindowDragPart>
 
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <Image Width="20" Height="20" Source="/Dance.Tool.Module;component/Resources/Icons/logo.png" VerticalAlignment="Center"></Image>
+                            <TextBlock Text="Dance" VerticalAlignment="Center" Margin="10,0,0,0" FontWeight="Bold"></TextBlock>
+                        </StackPanel>
+
                         <Grid Grid.Column="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>

@@ -7,45 +7,46 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\bg.jpg" />
-	  <None Remove="Resources\Images\email.png" />
-	  <None Remove="Resources\Images\enter.png" />
-	  <None Remove="Resources\Images\flower1.png" />
-	  <None Remove="Resources\Images\flower2.png" />
-	  <None Remove="Resources\Images\flower3.png" />
-	  <None Remove="Resources\Images\FontImage\font_c.png" />
-	  <None Remove="Resources\Images\FontImage\font_e.png" />
-	  <None Remove="Resources\Images\FontImage\font_e2.png" />
-	  <None Remove="Resources\Images\FontImage\font_l.png" />
-	  <None Remove="Resources\Images\FontImage\font_m.png" />
-	  <None Remove="Resources\Images\FontImage\font_o.png" />
-	  <None Remove="Resources\Images\FontImage\font_W.png" />
+		<None Remove="Resources\Icons\logo.png" />
+		<None Remove="Resources\Images\bg.jpg" />
+		<None Remove="Resources\Images\email.png" />
+		<None Remove="Resources\Images\enter.png" />
+		<None Remove="Resources\Images\flower1.png" />
+		<None Remove="Resources\Images\flower2.png" />
+		<None Remove="Resources\Images\flower3.png" />
+		<None Remove="Resources\Images\FontImage\font_c.png" />
+		<None Remove="Resources\Images\FontImage\font_e.png" />
+		<None Remove="Resources\Images\FontImage\font_e2.png" />
+		<None Remove="Resources\Images\FontImage\font_l.png" />
+		<None Remove="Resources\Images\FontImage\font_m.png" />
+		<None Remove="Resources\Images\FontImage\font_o.png" />
+		<None Remove="Resources\Images\FontImage\font_W.png" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<Folder Include="Resources\Fonts\" />
-		<Folder Include="Resources\Icons\" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
-	  <ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
+		<ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
+		<ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Resource Include="Resources\Images\bg.jpg" />
-	  <Resource Include="Resources\Images\email.png" />
-	  <Resource Include="Resources\Images\enter.png" />
-	  <Resource Include="Resources\Images\Flower\flower1.png" />
-	  <Resource Include="Resources\Images\Flower\flower2.png" />
-	  <Resource Include="Resources\Images\Flower\flower3.png" />
-	  <Resource Include="Resources\Images\FontImage\font_c.png" />
-	  <Resource Include="Resources\Images\FontImage\font_e.png" />
-	  <Resource Include="Resources\Images\FontImage\font_e2.png" />
-	  <Resource Include="Resources\Images\FontImage\font_l.png" />
-	  <Resource Include="Resources\Images\FontImage\font_m.png" />
-	  <Resource Include="Resources\Images\FontImage\font_o.png" />
-	  <Resource Include="Resources\Images\FontImage\font_W.png" />
+		<Resource Include="Resources\Icons\logo.png" />
+		<Resource Include="Resources\Images\bg.jpg" />
+		<Resource Include="Resources\Images\email.png" />
+		<Resource Include="Resources\Images\enter.png" />
+		<Resource Include="Resources\Images\Flower\flower1.png" />
+		<Resource Include="Resources\Images\Flower\flower2.png" />
+		<Resource Include="Resources\Images\Flower\flower3.png" />
+		<Resource Include="Resources\Images\FontImage\font_c.png" />
+		<Resource Include="Resources\Images\FontImage\font_e.png" />
+		<Resource Include="Resources\Images\FontImage\font_e2.png" />
+		<Resource Include="Resources\Images\FontImage\font_l.png" />
+		<Resource Include="Resources\Images\FontImage\font_m.png" />
+		<Resource Include="Resources\Images\FontImage\font_o.png" />
+		<Resource Include="Resources\Images\FontImage\font_W.png" />
 	</ItemGroup>
 
 </Project>

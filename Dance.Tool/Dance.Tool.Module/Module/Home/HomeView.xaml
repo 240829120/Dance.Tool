@@ -16,7 +16,8 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <ListBox ItemsSource="{Binding Path=PluginModels}" SelectedValue="{Binding Path=SelectedPluginModel,Mode=TwoWay}" Margin="10">
+                        <ListBox ItemsSource="{Binding Path=PluginModels}" SelectedValue="{Binding Path=SelectedPluginModel,Mode=TwoWay}" Margin="10"
+                                 dance:DanceShuttleOption.UnitLength="50">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Path=Name}"></TextBlock>

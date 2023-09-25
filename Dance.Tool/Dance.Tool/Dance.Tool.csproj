@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <UseWPF>true</UseWPF>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>logo.ico</ApplicationIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
-    <ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
-    <ProjectReference Include="..\Dance.Tool.Module\Dance.Tool.Module.csproj" />
-    <ProjectReference Include="..\Dance.Tool.Plugin\Dance.Tool.Plugin.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
+		<ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
+		<ProjectReference Include="..\Dance.Tool.Module\Dance.Tool.Module.csproj" />
+		<ProjectReference Include="..\Dance.Tool.Plugin\Dance.Tool.Plugin.csproj" />
+	</ItemGroup>
 
 </Project>
