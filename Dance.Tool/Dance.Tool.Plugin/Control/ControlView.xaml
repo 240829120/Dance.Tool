@@ -92,6 +92,38 @@
                         <TextBox Text="文本框" Margin="10" Width="240" IsEnabled="False"></TextBox>
                     </StackPanel>
 
+                    <dance:DanceSeparator Opacity="0.86">分组</dance:DanceSeparator>
+
+                    <StackPanel Orientation="Vertical" Margin="0,30,0,30">
+                        <TabControl>
+                            <TabItem Header="Tab1">
+                                <Border Height="50" Margin="20">
+                                    <TextBlock>Tab1 Content</TextBlock>
+                                </Border>
+                            </TabItem>
+                            <TabItem Header="Tab2">
+                                <Border Height="50" Margin="20">
+                                    <TextBlock>Tab2 Content</TextBlock>
+                                </Border>
+                            </TabItem>
+                            <TabItem Header="Tab3">
+                                <Border Height="50" Margin="20">
+                                    <TextBlock>Tab3 Content</TextBlock>
+                                </Border>
+                            </TabItem>
+                            <TabItem Header="Tab4">
+                                <Border Height="50" Margin="20">
+                                    <TextBlock>Tab4 Content</TextBlock>
+                                </Border>
+                            </TabItem>
+                            <TabItem Header="Tab5">
+                                <Border Height="50" Margin="20">
+                                    <TextBlock>Tab5 Content</TextBlock>
+                                </Border>
+                            </TabItem>
+                        </TabControl>
+                    </StackPanel>
+
                 </StackPanel>
             </GroupBox>
 
