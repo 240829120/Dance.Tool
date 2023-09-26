@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.Input;
+using Dance.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -29,6 +31,9 @@ namespace Dance.Tool.Plugin
                     School = $"school_{i}"
                 });
             }
+
+            this.ShowMessageBoxCommand = new RelayCommand(this.ShowMessageBox);
+            this.ShowIconMessageBoxCommand = new RelayCommand(this.ShowIconMessageBox);
         }
 
         #region ItemsSource -- 数据源
@@ -41,6 +46,40 @@ namespace Dance.Tool.Plugin
         {
             get { return itemsSource; }
             set { itemsSource = value; this.OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        #region ShowMessageBoxCommand -- 显示消息框命令
+
+        /// <summary>
+        /// 显示消息框命令
+        /// </summary>
+        public RelayCommand ShowMessageBoxCommand { get; private set; }
+
+        /// <summary>
+        /// 显示消息框
+        /// </summary>
+        private void ShowMessageBox()
+        {
+            DanceMessageBox.Show("头部", "内容");
+        }
+
+        #endregion
+
+        #region ShowIconMessageBoxCommand -- 显示图标消息框命令
+
+        /// <summary>
+        /// 显示图标消息框命令
+        /// </summary>
+        public RelayCommand ShowIconMessageBoxCommand { get; private set; }
+
+        /// <summary>
+        /// 显示图标消息框
+        /// </summary>
+        private void ShowIconMessageBox()
+        {
+            DanceMessageBox.Show("头部", "内容");
         }
 
         #endregion

@@ -92,6 +92,13 @@
                         <TextBox Text="文本框" Margin="10" Width="240" IsEnabled="False"></TextBox>
                     </StackPanel>
 
+                    <dance:DanceSeparator Opacity="0.86">滑块</dance:DanceSeparator>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,30,0,30">
+                        <Slider Minimum="0" Maximum="100" Value="50" Margin="10" Width="400"></Slider>
+                        <Slider Minimum="0" Maximum="100" Value="50" Margin="10" Width="400" IsEnabled="False"></Slider>
+                    </StackPanel>
+
                     <dance:DanceSeparator Opacity="0.86">分组</dance:DanceSeparator>
 
                     <StackPanel Orientation="Vertical" Margin="0,30,0,30">
@@ -122,6 +129,15 @@
                                 </Border>
                             </TabItem>
                         </TabControl>
+                    </StackPanel>
+
+                    <dance:DanceSeparator Opacity="0.86">消息框</dance:DanceSeparator>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,30,0,30">
+                        <Button Margin="10" Style="{StaticResource Button_Secondary}" Content="消息框"
+                                Command="{Binding ShowMessageBoxCommand}"></Button>
+                        <Button Margin="10" Style="{StaticResource Button_Secondary}" Content="图标 消息框"
+                                Command="{Binding ShowIconMessageBoxCommand}"></Button>
                     </StackPanel>
 
                 </StackPanel>
