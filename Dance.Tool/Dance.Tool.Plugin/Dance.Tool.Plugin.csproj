@@ -7,9 +7,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Particle\flower.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\..\..\Dance\Dance\Dance.Wpf\Dance.Wpf.csproj" />
 		<ProjectReference Include="..\..\..\Dance\Dance\Dance\Dance.csproj" />
 		<ProjectReference Include="..\Dance.Tool.Module\Dance.Tool.Module.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Particle\flower.png" />
 	</ItemGroup>
 
 </Project>

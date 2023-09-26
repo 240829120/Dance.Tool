@@ -22,14 +22,12 @@
 
         <dance:DanceSeparator Grid.Row="1" VerticalAlignment="Top">预览</dance:DanceSeparator>
         <dance:DanceParticlePanel IsHitTestVisible="False" Grid.Row="1" Margin="0,30,0,0">
-            <dance:DanceParticleControllerBox x:Name="box" TranslateSpeedX="0,100" TranslateSpeedY="100,200" TranslateSpeedZ="0,300"
+            <dance:DanceParticleControllerBox x:Name="box" TranslateSpeedX="0,100" TranslateSpeedY="100,300" TranslateSpeedZ="0,400"
                                               RotationSpeedX="10,45" RotationSpeedY="10,45" RotationSpeedZ="20,90"
                                               X="0,1200" Y="0,0" Z="0,0" Perspective="-0.001"
                                               Duration="00:00:04,00:00:05" GenerateSpeed="20">
                 <dance:DanceParticleImageleGenerator Width="10,20" Height="10,20">
-                    <dance:DanceParticleImageDefine Uri="/Dance.Tool.Module;component/Resources/Images/Flower/flower1.png"></dance:DanceParticleImageDefine>
-                    <dance:DanceParticleImageDefine Uri="/Dance.Tool.Module;component/Resources/Images/Flower/flower2.png"></dance:DanceParticleImageDefine>
-                    <dance:DanceParticleImageDefine Uri="/Dance.Tool.Module;component/Resources/Images/Flower/flower3.png"></dance:DanceParticleImageDefine>
+                    <dance:DanceParticleImageDefine Uri="/Dance.Tool.Plugin;component/Particle/flower.png"></dance:DanceParticleImageDefine>
                 </dance:DanceParticleImageleGenerator>
             </dance:DanceParticleControllerBox>
         </dance:DanceParticlePanel>
