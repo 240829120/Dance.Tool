@@ -138,6 +138,9 @@
                                 Command="{Binding ShowMessageBoxCommand}"></Button>
                         <Button Margin="10" Style="{StaticResource Button_Secondary}" Content="图标 消息框"
                                 Command="{Binding ShowIconMessageBoxCommand}"></Button>
+
+                        <Button Margin="50,10,10,10" Style="{StaticResource Button_Secondary}" Content="通知"
+                                Command="{Binding ShowNotifyCommand}"></Button>
                     </StackPanel>
 
                 </StackPanel>

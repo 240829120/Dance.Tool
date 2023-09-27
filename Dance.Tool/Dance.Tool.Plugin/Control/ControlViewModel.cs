@@ -34,6 +34,7 @@ namespace Dance.Tool.Plugin
 
             this.ShowMessageBoxCommand = new RelayCommand(this.ShowMessageBox);
             this.ShowIconMessageBoxCommand = new RelayCommand(this.ShowIconMessageBox);
+            this.ShowNotifyCommand = new RelayCommand(this.ShowNotify);
         }
 
         #region ItemsSource -- 数据源
@@ -62,7 +63,7 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowMessageBox()
         {
-            DanceMessageBox.Show("提示", "内容");
+            DanceMessageExpansion.ShowMessageBox("提示", "内容");
         }
 
         #endregion
@@ -79,7 +80,24 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowIconMessageBox()
         {
-            DanceMessageBox.Show("提示", DanceResourceIcons.Success, "内容", DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL);
+            DanceMessageExpansion.ShowMessageBox("提示", DanceResourceIcons.Success, "内容", DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL);
+        }
+
+        #endregion
+
+        #region ShowNotifyCommand -- 显示通知命令
+
+        /// <summary>
+        /// 显示通知命令
+        /// </summary>
+        public RelayCommand ShowNotifyCommand { get; private set; }
+
+        /// <summary>
+        /// 显示通知
+        /// </summary>
+        private void ShowNotify()
+        {
+            DanceMessageExpansion.ShowNotify(System.Windows.Forms.ToolTipIcon.Info, "通知标题", "通知内容");
         }
 
         #endregion
