@@ -25,6 +25,8 @@ namespace Dance.Tool.Plugin
             {
                 this.ItemsSource.Add(Path.GetFileName(p));
             }
+
+            this.SelectedValue = this.ItemsSource.FirstOrDefault();
         }
 
         #region ItemsSoruce -- 源

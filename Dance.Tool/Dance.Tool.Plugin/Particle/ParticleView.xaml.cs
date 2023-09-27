@@ -36,6 +36,25 @@ namespace Dance.Tool.Plugin
                 return;
 
             this.box.GenerateSpeed = (int)this.slider.Value;
+            this.box2.GenerateSpeed = (int)this.slider.Value;
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if (this.box == null || this.box2 == null)
+                return;
+
+            this.box.IsEnabled = true;
+            this.box2.IsEnabled = false;
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (this.box == null || this.box2 == null)
+                return;
+
+            this.box.IsEnabled = false;
+            this.box2.IsEnabled = true;
         }
     }
 }
