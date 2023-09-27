@@ -62,7 +62,7 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowMessageBox()
         {
-            DanceMessageBox.Show("头部", "内容");
+            DanceMessageBox.Show("提示", "内容");
         }
 
         #endregion
@@ -79,7 +79,7 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowIconMessageBox()
         {
-            DanceMessageBox.Show("头部", DanceResourceIcons.Success, "内容", DanceMessageBoxAction.YES);
+            DanceMessageBox.Show("提示", DanceResourceIcons.Success, "内容", DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL);
         }
 
         #endregion
