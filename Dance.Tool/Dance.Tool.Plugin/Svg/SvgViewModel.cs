@@ -1,5 +1,7 @@
 ﻿using CsvHelper;
 using Dance.Wpf;
+using SharpVectors.Converters;
+using SharpVectors.Renderers.Wpf;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -66,9 +68,7 @@ namespace Dance.Tool.Plugin
                     return;
                 }
 
-                DanceSVG svg = DanceSVGReader.Read(path);
-
-                this.ImageSource = new DrawingImage(svg.GetDrawing());
+                this.ImageSource = DanceXamlExpansion.GetSvgImageSource(new Uri(path));
             }
         }
 
@@ -77,11 +77,11 @@ namespace Dance.Tool.Plugin
 
         #region ImageSource -- 图片源
 
-        private DrawingImage? imageSource;
+        private ImageSource? imageSource;
         /// <summary>
         /// 图片源
         /// </summary>
-        public DrawingImage? ImageSource
+        public ImageSource? ImageSource
         {
             get { return imageSource; }
             private set { imageSource = value; this.OnPropertyChanged(); }
