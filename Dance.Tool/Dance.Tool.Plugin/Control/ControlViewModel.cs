@@ -37,6 +37,11 @@ namespace Dance.Tool.Plugin
             this.ShowNotifyCommand = new RelayCommand(this.ShowNotify);
         }
 
+        /// <summary>
+        /// 随机数
+        /// </summary>
+        private Random random = new();
+
         #region ItemsSource -- 数据源
 
         private ObservableCollection<ControlTestModel> itemsSource;
@@ -63,7 +68,14 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowMessageBox()
         {
-            DanceMessageExpansion.ShowMessageBox("提示", "内容");
+            int length = random.Next(10, 100);
+            StringBuilder sb = new();
+            for (int i = 0; i < length; i++)
+            {
+                sb.Append($"{i}");
+            }
+
+            DanceMessageExpansion.ShowMessageBox("信息", sb.ToString(), DanceMessageBoxAction.YES);
         }
 
         #endregion
@@ -80,7 +92,22 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void ShowIconMessageBox()
         {
-            DanceMessageExpansion.ShowMessageBox("提示", DanceResourceIcons.Success, "内容", DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL);
+            int type = random.Next(0, 4);
+            int length = random.Next(10, 100);
+            StringBuilder sb = new();
+            for (int i = 0; i < length; i++)
+            {
+                sb.Append($"{i}");
+            }
+
+            switch (type)
+            {
+                case 0: DanceMessageExpansion.ShowMessageBox("成功", DanceResourceIcons.Success, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 1: DanceMessageExpansion.ShowMessageBox("失败", DanceResourceIcons.Failure, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 2: DanceMessageExpansion.ShowMessageBox("警告", DanceResourceIcons.Warning, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 3: DanceMessageExpansion.ShowMessageBox("信息", DanceResourceIcons.Info, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                default: break;
+            }
         }
 
         #endregion
