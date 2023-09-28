@@ -131,87 +131,108 @@
                         </TabControl>
                     </StackPanel>
 
+                    <dance:DanceSeparator Opacity="0.86">日期</dance:DanceSeparator>
+
+                    <StackPanel Orientation="Horizontal" Margin="0,30,0,30">
+                        <StackPanel>
+                            <DatePicker Width="240" Margin="10,15,10,10" VerticalAlignment="Top"></DatePicker>
+                            <DatePicker Width="240" Margin="10,15,10,10" VerticalAlignment="Top" IsEnabled="False"></DatePicker>
+                        </StackPanel>
+                        <Calendar Margin="50,10,10,10"></Calendar>
+                        <Calendar Margin="10,10,10,10" IsEnabled="False"></Calendar>
+                    </StackPanel>
+
                     <dance:DanceSeparator Opacity="0.86">菜单</dance:DanceSeparator>
 
                     <StackPanel Orientation="Horizontal" Margin="0,30,0,30">
 
-                        <Menu VerticalAlignment="Center" Margin="10">
-                            <MenuItem Header="文件(_F)">
-                                <MenuItem Header="打开">
-                                    <MenuItem Header="11111111111111111111111111111111111111111111111111111111111111111111111111111111" InputGestureText="Ctrl+N">
-                                        <MenuItem.Icon>
-                                            <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/about.svg"></dance:DanceSvgImage>
-                                        </MenuItem.Icon>
+                        <StackPanel>
+                            <Menu VerticalAlignment="Center" Margin="10">
+                                <MenuItem Header="文件(_F)">
+                                    <MenuItem Header="打开">
+                                        <MenuItem Header="11111111111111111111111111111111111111111111111111111111111111111111111111111111" InputGestureText="Ctrl+N">
+                                            <MenuItem.Icon>
+                                                <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/about.svg"></dance:DanceSvgImage>
+                                            </MenuItem.Icon>
+                                        </MenuItem>
+                                        <MenuItem Header="关闭">
+                                            <MenuItem.Icon>
+                                                <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/accept_database.svg"></dance:DanceSvgImage>
+                                            </MenuItem.Icon>
+                                        </MenuItem>
+                                        <MenuItem Header="2">
+                                            <MenuItem.Icon>
+                                                <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/address_book.svg"></dance:DanceSvgImage>
+                                            </MenuItem.Icon>
+                                            <MenuItem Header="2" IsCheckable="True"></MenuItem>
+                                            <MenuItem Header="3" IsCheckable="True"></MenuItem>
+                                            <MenuItem Header="4" IsCheckable="True"></MenuItem>
+                                            <MenuItem Header="5" IsCheckable="True"></MenuItem>
+                                        </MenuItem>
+                                        <MenuItem Header="3"></MenuItem>
+                                        <MenuItem Header="4"></MenuItem>
+                                        <MenuItem Header="5"></MenuItem>
                                     </MenuItem>
-                                    <MenuItem Header="关闭">
-                                        <MenuItem.Icon>
-                                            <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/accept_database.svg"></dance:DanceSvgImage>
-                                        </MenuItem.Icon>
-                                    </MenuItem>
-                                    <MenuItem Header="2">
-                                        <MenuItem.Icon>
-                                            <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/address_book.svg"></dance:DanceSvgImage>
-                                        </MenuItem.Icon>
-                                        <MenuItem Header="2" IsCheckable="True"></MenuItem>
-                                        <MenuItem Header="3" IsCheckable="True"></MenuItem>
-                                        <MenuItem Header="4" IsCheckable="True"></MenuItem>
-                                        <MenuItem Header="5" IsCheckable="True"></MenuItem>
-                                    </MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
+                                    <MenuItem Header="3"></MenuItem>
+                                    <MenuItem Header="4"></MenuItem>
+                                    <MenuItem Header="5"></MenuItem>
+                                    <MenuItem Header="2"></MenuItem>
                                     <MenuItem Header="3"></MenuItem>
                                     <MenuItem Header="4"></MenuItem>
                                     <MenuItem Header="5"></MenuItem>
                                 </MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                                <MenuItem Header="2"></MenuItem>
-                                <MenuItem Header="3"></MenuItem>
-                                <MenuItem Header="4"></MenuItem>
-                                <MenuItem Header="5"></MenuItem>
-                            </MenuItem>
-                            <MenuItem Header="编辑(_E)"></MenuItem>
-                            <MenuItem Header="视图(_V)"></MenuItem>
-                            <MenuItem Header="项目(_P)"></MenuItem>
-                        </Menu>
+                                <MenuItem Header="编辑(_E)"></MenuItem>
+                                <MenuItem Header="视图(_V)"></MenuItem>
+                                <MenuItem Header="项目(_P)"></MenuItem>
+                            </Menu>
 
-                        <Grid VerticalAlignment="Center" Background="Transparent" UseLayoutRounding="True" SnapsToDevicePixels="True">
+                            <Menu VerticalAlignment="Center" Margin="10" IsEnabled="False">
+                                <MenuItem Header="文件(_F)"></MenuItem>
+                                <MenuItem Header="编辑(_E)"></MenuItem>
+                                <MenuItem Header="视图(_V)"></MenuItem>
+                                <MenuItem Header="项目(_P)"></MenuItem>
+                            </Menu>
+                        </StackPanel>
+
+
+                        <Grid VerticalAlignment="Top" Margin="50,10,0,0" Background="Transparent" UseLayoutRounding="True" SnapsToDevicePixels="True">
                             <Grid.ContextMenu>
                                 <ContextMenu>
                                     <MenuItem Header="1">
