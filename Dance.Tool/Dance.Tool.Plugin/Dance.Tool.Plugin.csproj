@@ -8,6 +8,19 @@
 
 	<ItemGroup>
 	  <None Remove="Particle\flower.png" />
+	  <None Remove="Resources\Icon\about.svg" />
+	  <None Remove="Resources\Icon\accept_database.svg" />
+	  <None Remove="Resources\Icon\address_book.svg" />
+	  <None Remove="Resources\Icon\add_column.svg" />
+	  <None Remove="Resources\Icon\add_database.svg" />
+	  <None Remove="Resources\Icon\add_image.svg" />
+	  <None Remove="Resources\Icon\add_row.svg" />
+	  <None Remove="Resources\Icon\advance.svg" />
+	  <None Remove="Resources\Icon\advertising.svg" />
+	  <None Remove="Resources\Icon\alarm_clock.svg" />
+	  <None Remove="Resources\Icon\alphabetical_sorting_az.svg" />
+	  <None Remove="Resources\Icon\alphabetical_sorting_za.svg" />
+	  <None Remove="Resources\Icon\android_os.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -18,6 +31,19 @@
 
 	<ItemGroup>
 	  <Resource Include="Particle\flower.png" />
+	  <Resource Include="Resources\Icon\about.svg" />
+	  <Resource Include="Resources\Icon\accept_database.svg" />
+	  <Resource Include="Resources\Icon\address_book.svg" />
+	  <Resource Include="Resources\Icon\add_column.svg" />
+	  <Resource Include="Resources\Icon\add_database.svg" />
+	  <Resource Include="Resources\Icon\add_image.svg" />
+	  <Resource Include="Resources\Icon\add_row.svg" />
+	  <Resource Include="Resources\Icon\advance.svg" />
+	  <Resource Include="Resources\Icon\advertising.svg" />
+	  <Resource Include="Resources\Icon\alarm_clock.svg" />
+	  <Resource Include="Resources\Icon\alphabetical_sorting_az.svg" />
+	  <Resource Include="Resources\Icon\alphabetical_sorting_za.svg" />
+	  <Resource Include="Resources\Icon\android_os.svg" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -21,7 +21,7 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="生成速度:" VerticalAlignment="Center" Opacity="0.6"></TextBlock>
-                <Slider x:Name="slider" Width="600" VerticalAlignment="Center" Margin="30,0,0,0" Minimum="10" Maximum="50" SmallChange="1" Value="20"
+                <Slider x:Name="slider" Width="600" VerticalAlignment="Center" Margin="30,0,0,0" Minimum="10" Maximum="120" SmallChange="1" Value="40"
                     ValueChanged="slider_ValueChanged"></Slider>
             </StackPanel>
 
@@ -32,11 +32,11 @@
         </Grid>
 
         <dance:DanceSeparator Grid.Row="1" VerticalAlignment="Top">预览</dance:DanceSeparator>
-        <dance:DanceParticlePanel IsHitTestVisible="False" Grid.Row="1" Margin="0,30,0,0">
+        <dance:DanceParticlePanel IsHitTestVisible="False" Grid.Row="1" Margin="0,30,0,0" IsShowDebugInfo="True">
             <dance:DanceParticleControllerBox x:Name="box" TranslateSpeedX="0,100" TranslateSpeedY="100,300" TranslateSpeedZ="0,400"
                                               RotationSpeedX="10,45" RotationSpeedY="10,45" RotationSpeedZ="20,90"
                                               X="0,1200" Y="0,0" Z="0,0" Perspective="-0.001"
-                                              Duration="00:00:04,00:00:05" GenerateSpeed="20">
+                                              Duration="00:00:04,00:00:05" GenerateSpeed="40">
                 <dance:DanceParticleImageleGenerator Width="10,20" Height="10,20">
                     <dance:DanceParticleImageDefine Uri="/Dance.Tool.Plugin;component/Particle/flower.png"></dance:DanceParticleImageDefine>
                 </dance:DanceParticleImageleGenerator>
@@ -44,7 +44,7 @@
             <dance:DanceParticleControllerBox x:Name="box2" TranslateSpeedX="0,100" TranslateSpeedY="100,300" TranslateSpeedZ="0,400"
                                               RotationSpeedX="90,180" RotationSpeedY="90,180" RotationSpeedZ="90,180"
                                               X="0,1200" Y="0,0" Z="0,0" Perspective="-0.001" IsEnabled="False"
-                                              Duration="00:00:04,00:00:05" GenerateSpeed="20">
+                                              Duration="00:00:04,00:00:05" GenerateSpeed="40">
                 <dance:DanceParticleRectangleGenerator Width="10,15" Height="5,10" Colors="#FFE89D1C,#FF40E81C,#FFE89505,#FF1C7FE8,#FFE810B3,#FFE84D05,#FFE5E81C">
                 </dance:DanceParticleRectangleGenerator>
             </dance:DanceParticleControllerBox>
