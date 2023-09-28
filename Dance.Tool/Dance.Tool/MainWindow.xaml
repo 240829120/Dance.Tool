@@ -6,7 +6,7 @@
         xmlns:module="clr-namespace:Dance.Tool.Module;assembly=Dance.Tool.Module"
         xmlns:local="clr-namespace:Dance.Tool" BorderBrush="Transparent"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None"
-        Title="Dance.Tool" Height="800" Width="1400" Background="Transparent">
+        Title="Dance" Height="800" Width="1400" Background="Transparent">
     <Window.Style>
         <Style TargetType="Window">
             <Setter Property="WindowChrome.WindowChrome">
