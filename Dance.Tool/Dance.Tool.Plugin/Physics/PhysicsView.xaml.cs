@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dance.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,10 @@ namespace Dance.Tool.Plugin
         public PhysicsView()
         {
             InitializeComponent();
+
+            PhysicsViewModel vm = DanceDomain.Current.LifeScope.Resolve<PhysicsViewModel>();
+            vm.View = this;
+            this.DataContext = vm;
         }
     }
 }

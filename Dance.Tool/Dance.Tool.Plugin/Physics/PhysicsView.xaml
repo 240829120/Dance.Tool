@@ -4,9 +4,164 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Dance.Tool.Plugin"
-             mc:Ignorable="d" 
+             xmlns:dance="http://schemas.dance.com/wpf"
+             mc:Ignorable="d" d:Background="White"
+             d:DataContext="{d:DesignInstance local:PhysicsViewModel}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+            <dance:DancePhysicsItemsControl x:Name="layout" StepSpeed="1" Gravity="0,100" Width="800" Height="600">
+                <dance:DancePhysicsItemJointGraphics></dance:DancePhysicsItemJointGraphics>
+
+                <dance:DancePhysicsItem>
+                    <Button Width="80" Height="30" Content="按钮" Style="{StaticResource Button_Secondary}"></Button>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="100,50" AngularVelocity="0.2" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+                <dance:DancePhysicsItem>
+                    <Button Width="80" Height="30" Content="按钮" Style="{StaticResource Button_Master}"></Button>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="80,260" AngularVelocity="0" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <dance:DancePhysicsItem>
+                    <ListBox ItemsSource="{Binding Path=TestModels}" Width="120" Height="200">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center"></TextBlock>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="220,120" AngularVelocity="0.1" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="120" Height="200" Friction="0.4" Restitution="0.7" Density="2"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <dance:DancePhysicsItem>
+                    <dance:DanceDataGrid Width="300" Height="300"
+                                         ItemsSource="{Binding Path=TestModels}">
+                        <dance:DanceDataGrid.Columns>
+                            <dance:DanceDataGridColumn Header="Index">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Index}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Name">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Age">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Age}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="Sex">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=Sex}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="City">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=City}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                            <dance:DanceDataGridColumn Header="School">
+                                <dance:DanceDataGridColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Path=School}" VerticalAlignment="Center"></TextBlock>
+                                    </DataTemplate>
+                                </dance:DanceDataGridColumn.CellTemplate>
+                            </dance:DanceDataGridColumn>
+                        </dance:DanceDataGrid.Columns>
+                    </dance:DanceDataGrid>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="500,360" AngularVelocity="0" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="300" Height="300" Friction="0.4" Restitution="0.7" Density="5"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <dance:DancePhysicsItem>
+                    <Calendar Width="214" Height="214"></Calendar>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="200,400" AngularVelocity="0" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="214" Height="214" Friction="0.4" Restitution="0.7" Density="2"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <dance:DancePhysicsItem>
+                    <DatePicker Width="240" Height="30"></DatePicker>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody LinearVelocity="0,0" Position="680,50" AngularVelocity="0.2" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="240" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <!-- 边框 -->
+                <dance:DancePhysicsItem>
+                    <Border Height="600" Width="10">
+                        <Rectangle Width="1" HorizontalAlignment="Right" Fill="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}"></Rectangle>
+                    </Border>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody x:Name="bStatic_left" Position="-5,300" BodyType="Static">
+                            <dance:DanceRectangleFixture Width="10" Height="600"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+                <dance:DancePhysicsItem>
+                    <Border Height="10" Width="800">
+                        <Rectangle Height="1" VerticalAlignment="Bottom" Fill="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}"></Rectangle>
+                    </Border>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody x:Name="bStatic_top" Position="400,-5" BodyType="Static">
+                            <dance:DanceRectangleFixture Width="800" Height="10"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+                <dance:DancePhysicsItem>
+                    <Border Height="600" Width="10">
+                        <Rectangle Width="1" HorizontalAlignment="Left" Fill="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}"></Rectangle>
+                    </Border>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody x:Name="bStatic_right" Position="805,300" BodyType="Static">
+                            <dance:DanceRectangleFixture Width="10" Height="600"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+                <dance:DancePhysicsItem>
+                    <Border Height="10" Width="800">
+                        <Rectangle Height="1" VerticalAlignment="Top" Fill="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}"></Rectangle>
+                    </Border>
+                    <dance:DancePhysicsItem.Body>
+                        <dance:DanceBody x:Name="bStatic_bottom" Position="400,605" BodyType="Static">
+                            <dance:DanceRectangleFixture Width="800" Height="10"></dance:DanceRectangleFixture>
+                        </dance:DanceBody>
+                    </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+            </dance:DancePhysicsItemsControl>
+        </Border>
     </Grid>
 </UserControl>
