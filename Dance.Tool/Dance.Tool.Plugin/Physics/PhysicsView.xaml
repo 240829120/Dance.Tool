@@ -10,7 +10,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="True">
             <dance:DancePhysicsItemsControl x:Name="layout" StepSpeed="1" Gravity="0,100" Width="800" Height="600">
                 <dance:DancePhysicsItemJointGraphics></dance:DancePhysicsItemJointGraphics>
 
@@ -117,6 +117,26 @@
                             <dance:DanceRectangleFixture Width="240" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
+                </dance:DancePhysicsItem>
+
+                <!-- 水 -->
+                <dance:DancePhysicsItem>
+                    <Border Width="800" Height="200" Margin="0,400,0,0" Opacity="0.1" IsHitTestVisible="False">
+                        <Border.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard RepeatBehavior="Forever" Storyboard.TargetName="img" Storyboard.TargetProperty="(Margin)">
+                                        <ThicknessAnimation From="-388,-5,0,0" To="0,-5,0,0" Duration="00:00:20"></ThicknessAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Border.Triggers>
+                        <Image x:Name="img" Width="1188" Height="210" Stretch="Fill"
+                               Source="/Dance.Tool.Plugin;component/Resources/Image/water.png" Margin="-388,-5,0,0"></Image>
+                    </Border>
+                    <dance:DancePhysicsItem.Controllers>
+                        <dance:DanceBuoyancyController WorldLowerBound="0,400" WorldUpperBound="800,600" Density="0.95"></dance:DanceBuoyancyController>
+                    </dance:DancePhysicsItem.Controllers>
                 </dance:DancePhysicsItem>
 
                 <!-- 边框 -->

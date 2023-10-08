@@ -21,6 +21,7 @@
 	  <None Remove="Resources\Icon\alphabetical_sorting_az.svg" />
 	  <None Remove="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <None Remove="Resources\Icon\android_os.svg" />
+	  <None Remove="Resources\Image\water.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -44,6 +45,7 @@
 	  <Resource Include="Resources\Icon\alphabetical_sorting_az.svg" />
 	  <Resource Include="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <Resource Include="Resources\Icon\android_os.svg" />
+	  <Resource Include="Resources\Image\water.png" />
 	</ItemGroup>
 
 	<ItemGroup>
