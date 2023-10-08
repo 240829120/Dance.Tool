@@ -18,7 +18,7 @@
                     <Button Width="80" Height="30" Content="按钮" Style="{StaticResource Button_Secondary}"></Button>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="100,50" AngularVelocity="0.2" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7" Density="0.7"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -41,7 +41,7 @@
                     </ListBox>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="220,120" AngularVelocity="0.1" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="120" Height="200" Friction="0.4" Restitution="0.7" Density="2"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="120" Height="200" Friction="0.4" Restitution="0.7" Density="1.2"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -105,7 +105,7 @@
                     <Calendar Width="214" Height="214"></Calendar>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="200,400" AngularVelocity="0" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="214" Height="214" Friction="0.4" Restitution="0.7" Density="2"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="214" Height="214" Friction="0.4" Restitution="0.7" Density="0.8"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
