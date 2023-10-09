@@ -10,7 +10,8 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <Border HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="True">
+        <Border BorderBrush="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}" 
+                BorderThickness="1" HorizontalAlignment="Center" VerticalAlignment="Center" ClipToBounds="True">
             <dance:DancePhysicsItemsControl x:Name="layout" StepSpeed="1" Gravity="0,100" Width="800" Height="600">
                 <dance:DancePhysicsItemJointGraphics></dance:DancePhysicsItemJointGraphics>
 
@@ -18,7 +19,7 @@
                     <Button Width="80" Height="30" Content="按钮" Style="{StaticResource Button_Secondary}"></Button>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="100,50" AngularVelocity="0.2" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7" Density="0.7"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7" Density="0.6"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -26,7 +27,7 @@
                     <Button Width="80" Height="30" Content="按钮" Style="{StaticResource Button_Master}"></Button>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="80,260" AngularVelocity="0" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="80" Height="30" Friction="0.4" Restitution="0.7" Density="2"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -40,8 +41,8 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                     <dance:DancePhysicsItem.Body>
-                        <dance:DanceBody LinearVelocity="0,0" Position="220,120" AngularVelocity="0.1" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="120" Height="200" Friction="0.4" Restitution="0.7" Density="1.2"></dance:DanceRectangleFixture>
+                        <dance:DanceBody LinearVelocity="100,0" Position="220,120" AngularVelocity="0.6" LinearDamping="0.2">
+                            <dance:DanceRectangleFixture Width="120" Height="200" Friction="0.4" Restitution="0.7" Density="1.01"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -96,7 +97,7 @@
                     </dance:DanceDataGrid>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="500,360" AngularVelocity="0" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="300" Height="300" Friction="0.4" Restitution="0.7" Density="5"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="300" Height="300" Friction="0.4" Restitution="0.7" Density="1.05"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -105,7 +106,7 @@
                     <Calendar Width="214" Height="214"></Calendar>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="200,400" AngularVelocity="0" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="214" Height="214" Friction="0.4" Restitution="0.7" Density="0.8"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="214" Height="214" Friction="0.4" Restitution="0.7" Density="0.7"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>
@@ -114,7 +115,7 @@
                     <DatePicker Width="240" Height="30"></DatePicker>
                     <dance:DancePhysicsItem.Body>
                         <dance:DanceBody LinearVelocity="0,0" Position="680,50" AngularVelocity="0.2" LinearDamping="0.2">
-                            <dance:DanceRectangleFixture Width="240" Height="30" Friction="0.4" Restitution="0.7"></dance:DanceRectangleFixture>
+                            <dance:DanceRectangleFixture Width="240" Height="30" Friction="0.4" Restitution="0.7" Density="1.1"></dance:DanceRectangleFixture>
                         </dance:DanceBody>
                     </dance:DancePhysicsItem.Body>
                 </dance:DancePhysicsItem>

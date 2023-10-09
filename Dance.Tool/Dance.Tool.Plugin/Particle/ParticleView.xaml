@@ -32,7 +32,7 @@
         </Grid>
 
         <dance:DanceSeparator Grid.Row="1" VerticalAlignment="Top">预览</dance:DanceSeparator>
-        <dance:DanceParticlePanel IsHitTestVisible="False" Grid.Row="1" Margin="0,30,0,0" IsShowDebugInfo="True">
+        <dance:DanceParticlePanel IsHitTestVisible="False" Grid.Row="1" Margin="0,30,0,0" IsShowDebugInfo="False">
             <dance:DanceParticleControllerBox x:Name="box" TranslateSpeedX="0,100" TranslateSpeedY="100,300" TranslateSpeedZ="0,400"
                                               RotationSpeedX="10,45" RotationSpeedY="10,45" RotationSpeedZ="20,90"
                                               X="0,1200" Y="0,0" Z="0,0" Perspective="-0.001"
