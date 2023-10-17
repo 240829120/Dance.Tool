@@ -21,7 +21,26 @@
 	  <None Remove="Resources\Icon\alphabetical_sorting_az.svg" />
 	  <None Remove="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <None Remove="Resources\Icon\android_os.svg" />
+	  <None Remove="Resources\Icon\load_file.svg" />
+	  <None Remove="Resources\Icon\run.svg" />
+	  <None Remove="Resources\Icon\save.svg" />
+	  <None Remove="Resources\Icon\vscode.svg" />
 	  <None Remove="Resources\Image\water.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Resources\Icon\save.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="V8\Script\.vscode\launch.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+	  <PackageReference Include="Microsoft.ClearScript" Version="7.4.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -45,7 +64,16 @@
 	  <Resource Include="Resources\Icon\alphabetical_sorting_az.svg" />
 	  <Resource Include="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <Resource Include="Resources\Icon\android_os.svg" />
+	  <Resource Include="Resources\Icon\load_file.svg" />
+	  <Resource Include="Resources\Icon\run.svg" />
+	  <Resource Include="Resources\Icon\vscode.svg" />
 	  <Resource Include="Resources\Image\water.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="V8\V8View.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -125,6 +153,15 @@
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	  <None Update="Resources\Svg\9.svg">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="V8\Script\host.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="V8\Script\index.js">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="V8\Script\Student.js">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
