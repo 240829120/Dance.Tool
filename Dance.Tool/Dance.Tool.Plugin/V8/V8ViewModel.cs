@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace Dance.Tool.Plugin
 {
@@ -22,9 +23,9 @@ namespace Dance.Tool.Plugin
     {
         public V8ViewModel()
         {
-            this.LoadedCommand = new RelayCommand(this.Loaded);
             this.LoadedIndexCommand = new RelayCommand(this.LoadedIndex);
             this.RunCommand = new RelayCommand(this.Run);
+            this.DebugCommand = new RelayCommand(this.Debug);
             this.OpenVsCodeCommand = new RelayCommand(this.OpenVsCode);
             this.SaveCommand = new RelayCommand(this.Save);
 
@@ -42,32 +43,38 @@ namespace Dance.Tool.Plugin
         private V8ScriptEngine? Engine;
 
         // =====================================================================================
-        // Command
+        // Property
 
-        #region LoadedCommand -- 加载命令
+        #region IsDebugging -- 是否正在调试
 
+        private bool isDebugging;
         /// <summary>
-        /// 加载命令
+        /// 是否正在调试
         /// </summary>
-        public RelayCommand? LoadedCommand { get; set; }
-
-        /// <summary>
-        /// 加载
-        /// </summary>
-        private void Loaded()
+        public bool IsDebugging
         {
-            this.Engine = new V8ScriptEngine("Dance Google V8 Engine", V8ScriptEngineFlags.EnableDebugging |
-                                                                       V8ScriptEngineFlags.EnableRemoteDebugging |
-                                                                       V8ScriptEngineFlags.EnableDynamicModuleImports);
-
-            this.Engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
-            this.Engine.DocumentSettings.SearchPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script");
-            this.Engine.AddHostObject("V8Host", new V8Host());
-
-            this.LoadedIndex();
+            get { return isDebugging; }
+            set { isDebugging = value; this.OnPropertyChanged(); }
         }
 
         #endregion
+
+        #region IsRunning -- 是否正在运行
+
+        private bool isRunning;
+        /// <summary>
+        /// 是否正在运行
+        /// </summary>
+        public bool IsRunning
+        {
+            get { return isRunning; }
+            set { isRunning = value; this.OnPropertyChanged(); }
+        }
+
+        #endregion
+
+        // =====================================================================================
+        // Command
 
         #region LoadedIndexCommand -- 加载首页命令
 
@@ -219,7 +226,7 @@ namespace Dance.Tool.Plugin
                 string workPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script");
                 if (string.IsNullOrWhiteSpace(setupPath))
                 {
-                    DanceMessageExpansion.ShowMessageBox("错误", DanceResourceIcons.Warning, "未找到VSCode安装路径", DanceMessageBoxAction.YES);
+                    DanceMessageExpansion.ShowMessageBox("错误", DanceMessageBoxIcon.Warning, "未找到VSCode安装路径", DanceMessageBoxAction.YES);
 
                     return;
                 }
@@ -227,7 +234,7 @@ namespace Dance.Tool.Plugin
             }
             catch (Exception ex)
             {
-                DanceMessageExpansion.ShowMessageBox("错误", DanceResourceIcons.Warning, ex.Message, DanceMessageBoxAction.YES);
+                DanceMessageExpansion.ShowMessageBox("错误", DanceMessageBoxIcon.Warning, ex.Message, DanceMessageBoxAction.YES);
             }
 
         }
@@ -246,19 +253,105 @@ namespace Dance.Tool.Plugin
         /// </summary>
         private void Run()
         {
-            try
+            if (this.IsRunning)
             {
-                if (this.View is not V8View view)
-                    return;
+                this.Engine?.Dispose();
+                this.IsRunning = false;
 
-                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script", "index.js");
-
-                this.Engine?.EvaluateDocument(path, ModuleCategory.Standard);
+                return;
             }
-            catch (Exception ex)
+
+            this.IsRunning = true;
+
+            Task.Run(() =>
             {
-                DanceMessageExpansion.ShowMessageBox("错误", DanceResourceIcons.Failure, ex.Message, DanceMessageBoxAction.YES);
+                try
+                {
+                    this.Engine?.Dispose();
+
+                    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script", "index.js");
+
+                    this.Engine = new V8ScriptEngine("Dance Google V8 Engine", V8ScriptEngineFlags.EnableDynamicModuleImports);
+
+                    this.Engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
+                    this.Engine.DocumentSettings.SearchPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script");
+                    this.Engine.AddHostObject("V8Host", new V8Host());
+
+                    this.Engine?.EvaluateDocument(path, ModuleCategory.Standard);
+
+                    this.Engine?.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    DanceMessageExpansion.ShowMessageBox("错误", DanceMessageBoxIcon.Failure, ex.Message, DanceMessageBoxAction.YES);
+                }
+                finally
+                {
+                    Application.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        this.IsRunning = false;
+                    });
+                }
+            });
+        }
+
+        #endregion
+
+        #region DebugCommand -- 调试命令
+
+        /// <summary>
+        /// 调试命令
+        /// </summary>
+        public RelayCommand? DebugCommand { get; set; }
+
+        /// <summary>
+        /// 调试
+        /// </summary>
+        private void Debug()
+        {
+            if (this.IsDebugging)
+            {
+                this.Engine?.Dispose();
+                this.IsDebugging = false;
+
+                return;
             }
+
+            this.IsDebugging = true;
+
+            Task.Run(() =>
+            {
+                try
+                {
+                    this.Engine?.Dispose();
+
+                    string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script", "index.js");
+
+                    this.Engine = new V8ScriptEngine("Dance Google V8 Engine", V8ScriptEngineFlags.EnableDynamicModuleImports | V8ScriptEngineFlags.EnableDebugging |
+                                                                               V8ScriptEngineFlags.EnableRemoteDebugging | V8ScriptEngineFlags.AwaitDebuggerAndPauseOnStart);
+
+                    this.Engine.DocumentSettings.AccessFlags = DocumentAccessFlags.EnableFileLoading;
+                    this.Engine.DocumentSettings.SearchPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "V8", "Script");
+                    this.Engine.AddHostObject("V8Host", new V8Host());
+
+                    DanceMessageExpansion.ShowNotify(System.Windows.Forms.ToolTipIcon.Info, "Google V8 通知", "已经启动调试，等待VSCode启动");
+
+                    this.Engine?.EvaluateDocument(path, ModuleCategory.Standard);
+
+                    this.Engine?.Dispose();
+                }
+                catch (Exception ex)
+                {
+                    DanceMessageExpansion.ShowMessageBox("错误", DanceMessageBoxIcon.Failure, ex.Message, DanceMessageBoxAction.YES);
+                }
+                finally
+                {
+                    Application.Current.Dispatcher.BeginInvoke(() =>
+                    {
+                        this.IsDebugging = false;
+                    });
+                }
+            });
         }
 
         #endregion

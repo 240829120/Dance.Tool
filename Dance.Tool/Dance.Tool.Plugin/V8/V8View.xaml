@@ -7,10 +7,56 @@
              xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:dance="http://schemas.dance.com/wpf"
              xmlns:edit="http://icsharpcode.net/sharpdevelop/avalonedit"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" d:Background="White"
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance local:V8ViewModel}"
-             dance:DanceCommandTrigger.LoadedOnceCommand="{Binding Path=LoadedCommand}">
+             dance:DanceCommandTrigger.LoadedOnceCommand="{Binding Path=LoadedIndexCommand}">
+
+    <UserControl.Resources>
+        <dance:DanceMappingConverter x:Key="DebugIconConverter" Tag="t1">
+            <!-- True -->
+            <dance:DanceMappingConverterItem>
+                <dance:DanceMappingConverterItem.From>
+                    <sys:Boolean>True</sys:Boolean>
+                </dance:DanceMappingConverterItem.From>
+                <dance:DanceMappingConverterItem.To>
+                    <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/stop.svg" Width="12" Height="12"></dance:DanceSvgImage>
+                </dance:DanceMappingConverterItem.To>
+            </dance:DanceMappingConverterItem>
+            <!-- False -->
+            <dance:DanceMappingConverterItem>
+                <dance:DanceMappingConverterItem.From>
+                    <sys:Boolean>False</sys:Boolean>
+                </dance:DanceMappingConverterItem.From>
+                <dance:DanceMappingConverterItem.To>
+                    <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/debug.svg" Width="12" Height="12"></dance:DanceSvgImage>
+                </dance:DanceMappingConverterItem.To>
+            </dance:DanceMappingConverterItem>
+        </dance:DanceMappingConverter>
+
+        <dance:DanceMappingConverter x:Key="RunIconConverter">
+            <!-- True -->
+            <dance:DanceMappingConverterItem>
+                <dance:DanceMappingConverterItem.From>
+                    <sys:Boolean>True</sys:Boolean>
+                </dance:DanceMappingConverterItem.From>
+                <dance:DanceMappingConverterItem.To>
+                    <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/stop.svg" Width="12" Height="12"></dance:DanceSvgImage>
+                </dance:DanceMappingConverterItem.To>
+            </dance:DanceMappingConverterItem>
+            <!-- False -->
+            <dance:DanceMappingConverterItem>
+                <dance:DanceMappingConverterItem.From>
+                    <sys:Boolean>False</sys:Boolean>
+                </dance:DanceMappingConverterItem.From>
+                <dance:DanceMappingConverterItem.To>
+                    <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/run.svg" Width="12" Height="12"></dance:DanceSvgImage>
+                </dance:DanceMappingConverterItem.To>
+            </dance:DanceMappingConverterItem>
+        </dance:DanceMappingConverter>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
@@ -32,11 +78,10 @@
                     <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/vscode.svg" Width="12" Height="12"></dance:DanceSvgImage>
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="运行" Command="{Binding Path=RunCommand}">
-                <MenuItem.Icon>
-                    <dance:DanceSvgImage Source="pack://application:,,,/Dance.Tool.Plugin;component/Resources/Icon/run.svg" Width="12" Height="12"></dance:DanceSvgImage>
-                </MenuItem.Icon>
-            </MenuItem>
+            <MenuItem Header="调试脚本" Command="{Binding Path=DebugCommand}"
+                      Icon="{Binding IsDebugging,Converter={StaticResource DebugIconConverter}}"></MenuItem>
+            <MenuItem Header="运行脚本" Command="{Binding Path=RunCommand}"
+                      Icon="{Binding IsRunning,Converter={StaticResource RunIconConverter}}"></MenuItem>
         </Menu>
         <edit:TextEditor x:Name="edit" FontFamily="Consolas" FontSize="12pt" SyntaxHighlighting="JavaScript" ShowLineNumbers="True" WordWrap="True" Grid.Row="1">
             <edit:TextEditor.ContextMenu>

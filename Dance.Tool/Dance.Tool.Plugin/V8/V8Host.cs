@@ -20,7 +20,7 @@ namespace Dance.Tool.Plugin
         /// <param name="msg">消息</param>
         public void ShowMessage(string msg)
         {
-            DanceMessageExpansion.ShowMessageBox("Google V8 信息", DanceResourceIcons.Info, msg, DanceMessageBoxAction.YES);
+            DanceMessageExpansion.ShowMessageBox("Google V8 信息", DanceMessageBoxIcon.Info, msg, DanceMessageBoxAction.YES);
         }
 
         /// <summary>

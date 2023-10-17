@@ -21,14 +21,17 @@
 	  <None Remove="Resources\Icon\alphabetical_sorting_az.svg" />
 	  <None Remove="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <None Remove="Resources\Icon\android_os.svg" />
+	  <None Remove="Resources\Icon\debug.svg" />
 	  <None Remove="Resources\Icon\load_file.svg" />
 	  <None Remove="Resources\Icon\run.svg" />
 	  <None Remove="Resources\Icon\save.svg" />
+	  <None Remove="Resources\Icon\stop.svg" />
 	  <None Remove="Resources\Icon\vscode.svg" />
 	  <None Remove="Resources\Image\water.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Resource Include="Resources\Icon\run.svg" />
 	  <Resource Include="Resources\Icon\save.svg" />
 	</ItemGroup>
 
@@ -65,7 +68,8 @@
 	  <Resource Include="Resources\Icon\alphabetical_sorting_za.svg" />
 	  <Resource Include="Resources\Icon\android_os.svg" />
 	  <Resource Include="Resources\Icon\load_file.svg" />
-	  <Resource Include="Resources\Icon\run.svg" />
+	  <Resource Include="Resources\Icon\debug.svg" />
+	  <Resource Include="Resources\Icon\stop.svg" />
 	  <Resource Include="Resources\Icon\vscode.svg" />
 	  <Resource Include="Resources\Image\water.png" />
 	</ItemGroup>

@@ -75,7 +75,7 @@ namespace Dance.Tool.Plugin
                 sb.Append($"{i}");
             }
 
-            DanceMessageExpansion.ShowMessageBox("信息", sb.ToString(), DanceMessageBoxAction.YES);
+            DanceMessageExpansion.ShowMessageBox("信息", DanceMessageBoxIcon.None, sb.ToString(), DanceMessageBoxAction.YES);
         }
 
         #endregion
@@ -102,10 +102,10 @@ namespace Dance.Tool.Plugin
 
             switch (type)
             {
-                case 0: DanceMessageExpansion.ShowMessageBox("成功", DanceResourceIcons.Success, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
-                case 1: DanceMessageExpansion.ShowMessageBox("失败", DanceResourceIcons.Failure, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
-                case 2: DanceMessageExpansion.ShowMessageBox("警告", DanceResourceIcons.Warning, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
-                case 3: DanceMessageExpansion.ShowMessageBox("信息", DanceResourceIcons.Info, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 0: DanceMessageExpansion.ShowMessageBox("成功", DanceMessageBoxIcon.Success, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 1: DanceMessageExpansion.ShowMessageBox("失败", DanceMessageBoxIcon.Failure, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 2: DanceMessageExpansion.ShowMessageBox("警告", DanceMessageBoxIcon.Warning, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
+                case 3: DanceMessageExpansion.ShowMessageBox("信息", DanceMessageBoxIcon.Info, sb.ToString(), DanceMessageBoxAction.YES | DanceMessageBoxAction.CANCEL); break;
                 default: break;
             }
         }
