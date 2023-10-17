@@ -44,6 +44,7 @@
 	<ItemGroup>
 	  <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
 	  <PackageReference Include="Microsoft.ClearScript" Version="7.4.3" />
+	  <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2088.41" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -76,6 +77,9 @@
 
 	<ItemGroup>
 	  <Compile Update="V8\V8View.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
+	  <Compile Update="WebView2\WebView2View.xaml.cs">
 	    <SubType>Code</SubType>
 	  </Compile>
 	</ItemGroup>
