@@ -18,6 +18,7 @@ namespace Dance.Tool.Plugin
         public WebView2ViewModel()
         {
             this.GotoCommand = new RelayCommand(this.Goto);
+            this.ClickCommand = new RelayCommand(this.Click);
         }
 
         // ============================================================================
@@ -56,6 +57,23 @@ namespace Dance.Tool.Plugin
                 return;
 
             view.web.Source = string.IsNullOrWhiteSpace(this.Url) ? null : new Uri(this.Url);
+        }
+
+        #endregion
+
+        #region ClickCommand -- 点击命令
+
+        /// <summary>
+        /// 点击命令
+        /// </summary>
+        public RelayCommand? ClickCommand { get; set; }
+
+        /// <summary>
+        /// 点击
+        /// </summary>
+        private void Click()
+        {
+            DanceMessageExpansion.ShowMessageBox("WebView2 提示", DanceMessageBoxIcon.Info, "点击 WPF Button 按钮", DanceMessageBoxAction.YES);
         }
 
         #endregion

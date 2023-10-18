@@ -30,6 +30,14 @@
         <Border Grid.Row="1" Margin="10" BorderThickness="1" BorderBrush="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BORDER_BRUSH}}">
             <Grid>
                 <web:WebView2 x:Name="web" Source="http://www.baidu.com"></web:WebView2>
+                <dance:DanceOverlap Opacity="{Binding Path=Opacity,RelativeSource={RelativeSource AncestorType=dance:DanceNavigationItem},Mode=OneWay}"
+                                    Visibility="{Binding Path=Visibility,RelativeSource={RelativeSource AncestorType=dance:DanceNavigationItem},Mode=OneWay}">
+                    <StackPanel>
+                        <Border Width="400" Height="300" Background="{x:Null}" BorderBrush="SkyBlue" BorderThickness="10"></Border>
+                        <Button Width="120" Height="30" Style="{StaticResource Button_Master}" Content="WPF Button" Margin="0,20,0,0"
+                                    Command="{Binding Path=ClickCommand}"></Button>
+                    </StackPanel>
+                </dance:DanceOverlap>
             </Grid>
         </Border>
     </Grid>
