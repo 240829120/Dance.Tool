@@ -35,7 +35,7 @@
                     <StackPanel>
                         <Border Width="400" Height="300" Background="{x:Null}" BorderBrush="SkyBlue" BorderThickness="10"></Border>
                         <Button Width="120" Height="30" Style="{StaticResource Button_Master}" Content="WPF Button" Margin="0,20,0,0"
-                                    Command="{Binding Path=ClickCommand}"></Button>
+                                Command="{Binding Path=ClickCommand}"></Button>
                     </StackPanel>
                 </dance:DanceOverlap>
             </Grid>
