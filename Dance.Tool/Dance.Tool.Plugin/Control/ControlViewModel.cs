@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Dance.Tool.Plugin
 {
@@ -35,6 +36,8 @@ namespace Dance.Tool.Plugin
             this.ShowMessageBoxCommand = new RelayCommand(this.ShowMessageBox);
             this.ShowIconMessageBoxCommand = new RelayCommand(this.ShowIconMessageBox);
             this.ShowNotifyCommand = new RelayCommand(this.ShowNotify);
+            this.DragBeginCommand = new RelayCommand<DanceDragBeginEventArgs>(this.DragBegin);
+            this.DropCommand = new RelayCommand<DanceDragEventArgs>(this.Drop);
         }
 
         /// <summary>
@@ -125,6 +128,47 @@ namespace Dance.Tool.Plugin
         private void ShowNotify()
         {
             DanceMessageExpansion.ShowNotify(System.Windows.Forms.ToolTipIcon.Info, "通知标题", "通知内容");
+        }
+
+        #endregion
+
+        #region DragBeginCommand -- 拖拽开始命令
+
+        /// <summary>
+        /// 拖拽开始命令
+        /// </summary>
+        public RelayCommand<DanceDragBeginEventArgs> DragBeginCommand { get; set; }
+
+        /// <summary>
+        /// 拖拽开始
+        /// </summary>
+        private void DragBegin(DanceDragBeginEventArgs? e)
+        {
+            if (e == null)
+                return;
+
+            e.Data = "拖拽测试";
+        }
+
+        #endregion
+
+        #region DropCommand -- 放置命令
+
+        /// <summary>
+        /// 放置命令
+        /// </summary>
+        public RelayCommand<DanceDragEventArgs> DropCommand { get; set; }
+
+        /// <summary>
+        /// 放置
+        /// </summary>
+        private void Drop(DanceDragEventArgs? e)
+        {
+            if (e == null)
+                return;
+
+            string? data = e.Data.GetData(typeof(string))?.ToString();
+            DanceMessageExpansion.ShowNotify(ToolTipIcon.Info, "拖拽测试", data ?? string.Empty);
         }
 
         #endregion

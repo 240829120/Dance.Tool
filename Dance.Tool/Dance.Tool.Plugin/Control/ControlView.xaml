@@ -282,6 +282,22 @@
                                 Command="{Binding ShowNotifyCommand}"></Button>
                     </StackPanel>
 
+                    <dance:DanceSeparator Opacity="0.86">拖拽</dance:DanceSeparator>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Grid Height="100" Width="100" Margin="20" Background="{DynamicResource ResourceKey={x:Static Member=dance:DanceResourceKey.BACKGROUND_BRUSH_MOUSE_OVER}}"
+                              dance:DanceDragTrigger.DragBeginCommand="{Binding Path=DragBeginCommand}">
+                            <dance:DanceDashedRectangle StrokeDashArray="5 5" StrokeThickness="1"></dance:DanceDashedRectangle>
+                            <TextBlock Text="拖拽源" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        </Grid>
+
+                        <Grid Height="100" Width="100" Margin="60,20,20,20" Background="Transparent" AllowDrop="True"
+                              dance:DanceDragTrigger.DropCommand="{Binding Path=DropCommand}">
+                            <dance:DanceDashedRectangle StrokeDashArray="5 5" StrokeThickness="1"></dance:DanceDashedRectangle>
+                            <TextBlock Text="拖拽目标" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        </Grid>
+                    </StackPanel>
+
                 </StackPanel>
             </GroupBox>
 
