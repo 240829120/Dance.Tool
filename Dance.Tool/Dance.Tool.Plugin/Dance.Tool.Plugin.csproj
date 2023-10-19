@@ -76,6 +76,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Docking\DockingView.xaml.cs">
+	    <SubType>Code</SubType>
+	  </Compile>
 	  <Compile Update="V8\V8View.xaml.cs">
 	    <SubType>Code</SubType>
 	  </Compile>
