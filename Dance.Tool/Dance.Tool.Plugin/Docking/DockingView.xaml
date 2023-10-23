@@ -13,50 +13,50 @@
 
     <Grid>
         <dock:DockingManager Margin="5">
-            <LayoutRoot>
-                <LayoutPanel Orientation="Horizontal">
-                    <LayoutPanel Orientation="Vertical">
-                        <LayoutDocumentPane>
-                            <LayoutDocument Title="doc1111111111111111">
+            <dock:LayoutRoot>
+                <dock:LayoutPanel Orientation="Horizontal">
+                    <dock:LayoutPanel Orientation="Vertical">
+                        <dock:LayoutDocumentPane>
+                            <dock:LayoutDocument Title="doc1111111111111111">
                                 <TextBlock Text="doc1"></TextBlock>
-                            </LayoutDocument>
-                            <LayoutDocument Title="doc22222222">
+                            </dock:LayoutDocument>
+                            <dock:LayoutDocument Title="doc22222222">
                                 <TextBlock Text="doc2"></TextBlock>
-                            </LayoutDocument>
-                            <LayoutDocument Title="doc3">
+                            </dock:LayoutDocument>
+                            <dock:LayoutDocument Title="doc3">
                                 <TextBlock Text="doc3"></TextBlock>
-                            </LayoutDocument>
-                            <LayoutDocument Title="doc4444444">
+                            </dock:LayoutDocument>
+                            <dock:LayoutDocument Title="doc4444444">
                                 <TextBlock Text="doc4"></TextBlock>
-                            </LayoutDocument>
-                        </LayoutDocumentPane>
-                        <LayoutAnchorablePaneGroup DockHeight="128" Orientation="Horizontal">
-                            <LayoutAnchorablePane Name="ErrorsPane">
-                                <LayoutAnchorable Title="ErrorsPane">
+                            </dock:LayoutDocument>
+                        </dock:LayoutDocumentPane>
+                        <dock:LayoutAnchorablePaneGroup DockHeight="128" Orientation="Horizontal">
+                            <dock:LayoutAnchorablePane Name="ErrorsPane">
+                                <dock:LayoutAnchorable Title="ErrorsPane">
                                     <TextBlock Text="ErrorsPane"></TextBlock>
-                                </LayoutAnchorable>
-                            </LayoutAnchorablePane>
-                            <LayoutAnchorablePane Name="OutputPane">
-                                <LayoutAnchorable Title="OutputPane">
+                                </dock:LayoutAnchorable>
+                            </dock:LayoutAnchorablePane>
+                            <dock:LayoutAnchorablePane Name="OutputPane">
+                                <dock:LayoutAnchorable Title="OutputPane">
                                     <TextBlock Text="OutputPane"></TextBlock>
-                                </LayoutAnchorable>
-                            </LayoutAnchorablePane>
-                        </LayoutAnchorablePaneGroup>
-                    </LayoutPanel>
-                    <LayoutAnchorablePaneGroup DockWidth="256" Orientation="Vertical">
-                        <LayoutAnchorablePane Name="ExplorerPane" DockHeight="2*">
-                            <LayoutAnchorable Title="ExplorerPane">
+                                </dock:LayoutAnchorable>
+                            </dock:LayoutAnchorablePane>
+                        </dock:LayoutAnchorablePaneGroup>
+                    </dock:LayoutPanel>
+                    <dock:LayoutAnchorablePaneGroup DockWidth="256" Orientation="Vertical">
+                        <dock:LayoutAnchorablePane Name="ExplorerPane" DockHeight="2*">
+                            <dock:LayoutAnchorable Title="ExplorerPane">
                                 <TextBlock Text="ExplorerPane"></TextBlock>
-                            </LayoutAnchorable>
-                        </LayoutAnchorablePane>
-                        <LayoutAnchorablePane Name="PropertiesPane">
-                            <LayoutAnchorable Title="PropertiesPane">
+                            </dock:LayoutAnchorable>
+                        </dock:LayoutAnchorablePane>
+                        <dock:LayoutAnchorablePane Name="PropertiesPane">
+                            <dock:LayoutAnchorable Title="PropertiesPane">
                                 <TextBlock Text="PropertiesPane"></TextBlock>
-                            </LayoutAnchorable>
-                        </LayoutAnchorablePane>
-                    </LayoutAnchorablePaneGroup>
-                </LayoutPanel>
-            </LayoutRoot>
+                            </dock:LayoutAnchorable>
+                        </dock:LayoutAnchorablePane>
+                    </dock:LayoutAnchorablePaneGroup>
+                </dock:LayoutPanel>
+            </dock:LayoutRoot>
         </dock:DockingManager>
     </Grid>
 </UserControl>
