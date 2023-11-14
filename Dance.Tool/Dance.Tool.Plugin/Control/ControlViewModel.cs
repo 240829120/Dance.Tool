@@ -167,7 +167,7 @@ namespace Dance.Tool.Plugin
             if (e == null)
                 return;
 
-            string? data = e.Data.GetData(typeof(string))?.ToString();
+            string? data = e.EventArgs.Data.GetData(typeof(string))?.ToString();
             DanceMessageExpansion.ShowNotify(ToolTipIcon.Info, "拖拽测试", data ?? string.Empty);
         }
 
