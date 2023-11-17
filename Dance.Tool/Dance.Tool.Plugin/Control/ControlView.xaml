@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
              xmlns:local="clr-namespace:Dance.Tool.Plugin"
              xmlns:dance="http://schemas.dance.com/wpf"
              mc:Ignorable="d" d:Background="White"
@@ -462,8 +463,20 @@
                                                Margin="10" HorizontalAlignment="Left"></dance:DancePagination>
                     </StackPanel>
 
+                    <dance:DanceSeparator Opacity="0.86">PropertyGrid</dance:DanceSeparator>
+
+                    <Border MinHeight="1000">
+                        <toolkit:PropertyGrid x:Name="propertyGrid" Margin="0,30,0,0" Background="White" AutoGenerateProperties="True" HideInheritedProperties="True"
+                                          FilterWatermark="搜索">
+
+                        </toolkit:PropertyGrid>
+                    </Border>
                 </StackPanel>
+
+
             </GroupBox>
+
+
         </StackPanel>
     </ScrollViewer>
 </UserControl>
