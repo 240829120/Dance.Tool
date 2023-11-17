@@ -465,12 +465,10 @@
 
                     <dance:DanceSeparator Opacity="0.86">PropertyGrid</dance:DanceSeparator>
 
-                    <Border MinHeight="1000">
-                        <toolkit:PropertyGrid x:Name="propertyGrid" Margin="0,30,0,0" Background="White" AutoGenerateProperties="True" HideInheritedProperties="True"
-                                          FilterWatermark="搜索">
+                    <toolkit:PropertyGrid x:Name="propertyGrid" Margin="0,30,0,0" Background="White" AutoGenerateProperties="True" HideInheritedProperties="True"
+                                          Height="1000" FilterWatermark="搜索">
 
-                        </toolkit:PropertyGrid>
-                    </Border>
+                    </toolkit:PropertyGrid>
                 </StackPanel>
 
 
