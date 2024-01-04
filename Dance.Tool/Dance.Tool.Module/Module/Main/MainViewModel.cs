@@ -15,11 +15,11 @@ namespace Dance.Tool.Module
     {
         public MainViewModel()
         {
-            this.NavigationModels = new()
-            {
+            this.NavigationModels =
+            [
                 new NavigationModel { ViewType = typeof(WelcomeView) },
                 new NavigationModel { ViewType = typeof(HomeView) }
-            };
+            ];
 
             this.CurrentNavigationModel = this.NavigationModels.FirstOrDefault();
         }

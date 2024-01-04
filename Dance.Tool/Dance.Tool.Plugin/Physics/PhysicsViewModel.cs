@@ -30,11 +30,11 @@ namespace Dance.Tool.Plugin
             }
         }
 
-        private Random Random = new();
+        private readonly Random Random = new();
 
         #region TestModels -- 测试数据源
 
-        private List<ControlTestModel> testModels = new();
+        private List<ControlTestModel> testModels = [];
         /// <summary>
         /// 测试数据源
         /// </summary>

@@ -18,7 +18,7 @@ namespace Dance.Tool.Plugin
     {
         public ControlViewModel()
         {
-            this.itemsSource = new();
+            this.itemsSource = [];
 
             for (int i = 0; i < 30; i++)
             {
@@ -43,7 +43,7 @@ namespace Dance.Tool.Plugin
         /// <summary>
         /// 随机数
         /// </summary>
-        private Random random = new();
+        private readonly Random random = new();
 
         #region ItemsSource -- 数据源
 

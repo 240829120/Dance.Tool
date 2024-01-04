@@ -41,7 +41,7 @@ namespace Dance.Tool.Plugin
         public int Age { get; set; }
 
         [Category("基础"), Description("描述描述1231111")]
-        public List<Lession> Lessions { get; set; } = new() { new Lession { Name = "t1" } };
+        public List<Lession> Lessions { get; set; } = [new Lession { Name = "t1" }];
 
 
         [Category("基础"), Description("描述描述1231111")]
@@ -84,13 +84,13 @@ namespace Dance.Tool.Plugin
         public Teacher Teacher { get; set; } = new();
 
         [Category("列表")]
-        public List<Teacher> Items { get; set; } = new() { new Teacher { Name = "zs", Age = 17 } };
+        public List<Teacher> Items { get; set; } = [new Teacher { Name = "zs", Age = 17 }];
 
         [Category("列表")]
-        public List<string> Items2 { get; set; } = new();
+        public List<string> Items2 { get; set; } = [];
 
         [Category("列表")]
-        public List<int> Items3 { get; set; } = new List<int>() { 1, 2, 3 };
+        public List<int> Items3 { get; set; } = [1, 2, 3];
 
 
         [Category("测试")]

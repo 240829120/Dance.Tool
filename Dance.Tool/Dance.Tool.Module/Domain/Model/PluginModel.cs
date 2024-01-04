@@ -9,19 +9,10 @@ namespace Dance.Tool.Module
     /// <summary>
     /// 插件模型
     /// </summary>
-    public class PluginModel : DanceModel, IDancePluginInfo
+    /// <param name="name">名称</param>
+    /// <param name="viewType">视图类型</param>
+    public class PluginModel(string name, Type viewType) : DanceModel, IDancePluginInfo
     {
-        /// <summary>
-        /// 插件模型
-        /// </summary>
-        /// <param name="name">名称</param>
-        /// <param name="viewType">视图类型</param>
-        public PluginModel(string name, Type viewType)
-        {
-            this.Name = name;
-            this.ViewType = viewType;
-        }
-
         /// <summary>
         /// 编号
         /// </summary>
@@ -30,11 +21,11 @@ namespace Dance.Tool.Module
         /// <summary>
         /// 名称
         /// </summary>
-        public string Name { get; set; }
+        public string Name { get; set; } = name;
 
         /// <summary>
         /// 视图类型
         /// </summary>
-        public Type ViewType { get; set; }
+        public Type ViewType { get; set; } = viewType;
     }
 }

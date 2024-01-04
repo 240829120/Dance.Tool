@@ -36,7 +36,7 @@ namespace Dance.Tool.Plugin
         /// <summary>
         /// 源
         /// </summary>
-        public List<string> ItemsSource { get; } = new();
+        public List<string> ItemsSource { get; } = [];
 
         #endregion
 
